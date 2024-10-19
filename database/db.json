@@ -64,6 +64,46 @@
         ]
       },
       "id": 1
+    },
+    {
+      "user": "adminzadeh",
+      "for": "javascript",
+      "result": {
+        "right": [
+          {
+            "id": 21,
+            "title": "What is the difference between `==` and `===` in JavaScript?",
+            "right": "`===` checks for strict equality (value and type), `==` performs type coercion",
+            "a": "`==` checks for strict equality, `===` performs type coercion",
+            "b": "`===` checks for strict equality (value and type), `==` performs type coercion",
+            "c": "There is no difference",
+            "d": "`==` is faster than `===`"
+          }
+        ],
+        "wrong": [
+          {
+            "id": 22,
+            "title": "What is hoisting in JavaScript?",
+            "right": "The behavior where variables and function declarations are moved to the top of their scope",
+            "a": "A way to optimize JavaScript code",
+            "b": "The behavior where variables and function declarations are moved to the top of their scope",
+            "c": "A type of error in JavaScript",
+            "d": "A way to create closures"
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 23,
+            "title": "What is a closure in JavaScript?",
+            "right": "A function that has access to variables from its surrounding scope even after that scope has finished executing",
+            "a": "A type of loop",
+            "b": "A function that has access to variables from its surrounding scope even after that scope has finished executing",
+            "c": "A way to create objects",
+            "d": "A type of error"
+          }
+        ]
+      },
+      "id": 2
     }
   ],
   "profiles": [
