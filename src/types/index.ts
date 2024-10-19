@@ -21,12 +21,23 @@ export interface questionData {
 }
 
 export interface resultData {
-  user: string;
+  username: string;
   topic: string;
   result: Result;
 }
+
 export interface Result {
   right?: questionData[] | null;
   wrong?: questionData[] | null;
   withoutAnswer?: questionData[] | null;
+}
+
+export interface StoreState {
+  theme: string;
+  toggleTheme: () => void;
+  activeNav: string;
+  setActiveNav: (link: string) => void;
+  clearStore: () => void;
+  username: string;
+  setUsername: (name: string) => void;
 }

@@ -6,13 +6,12 @@ export async function submitUser(userData: userData): Promise<boolean> {
   const email = userData.email;
   const password = userData.password;
   try {
-    const response = await httpRequest.post(USER_URL, {
+    const response = await httpRequest.post(`${USER_URL}/login`, {
       email,
       password,
     });
     const accessToken = await response.data.accessToken;
     localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("username", userData.username);
     return true;
   } catch (e) {
     console.log(e);
