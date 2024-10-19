@@ -1,1 +1,488 @@
-{}
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "tests": [
+    {
+      "user": "adminzadeh",
+      "for": "react",
+      "result": {
+        "right": [
+          {
+            "id": 1,
+            "title": "Which of the answers are not a React component's life cycle?",
+            "right": "Initialization",
+            "a": "Mounting",
+            "b": "Initialization",
+            "c": "Updating",
+            "d": "Unmounting"
+          },
+          {
+            "id": 3,
+            "title": "What does `useState` hook do?",
+            "right": "Adds state to a functional component",
+            "a": "Adds props to a functional component",
+            "b": "Adds state to a functional component",
+            "c": "Adds lifecycle methods to a functional component",
+            "d": "Adds event listeners to a functional component"
+          }
+        ],
+        "wrong": [
+          {
+            "id": 2,
+            "title": "What is JSX?",
+            "right": "A syntax extension to JavaScript",
+            "a": "A JavaScript framework",
+            "b": "A syntax extension to JavaScript",
+            "c": "A CSS preprocessor",
+            "d": "A build tool"
+          },
+          {
+            "id": 5,
+            "title": "What is the purpose of `props` in React?",
+            "right": "To pass data from a parent component to a child component",
+            "a": "To manage component state",
+            "b": "To pass data from a parent component to a child component",
+            "c": "To handle component events",
+            "d": "To define component styles"
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 4,
+            "title": "What does `useEffect` hook do?",
+            "right": "Performs side effects in functional components",
+            "a": "Updates the component's state",
+            "b": "Performs side effects in functional components",
+            "c": "Renders the component",
+            "d": "Handles component events"
+          }
+        ]
+      },
+      "id": 1
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "username": "adminzadeh"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "name": "react",
+      "persianName": "ری اکت",
+      "quantity": 20,
+      "timeUnit": 60
+    },
+    {
+      "id": 2,
+      "name": "javascript",
+      "persianName": "جاوا اسکریپت",
+      "quantity": 20,
+      "timeUnit": 60
+    }
+  ],
+  "questions": [
+    [
+      {
+        "id": 1,
+        "for": "react",
+        "title": "Which of the answers are not a React component's life cycle?",
+        "right": "Initialization",
+        "a": "Mounting",
+        "b": "Initialization",
+        "c": "Updating",
+        "d": "Unmounting"
+      },
+      {
+        "id": 2,
+        "for": "react",
+        "title": "What is JSX?",
+        "right": "A syntax extension to JavaScript",
+        "a": "A JavaScript framework",
+        "b": "A syntax extension to JavaScript",
+        "c": "A CSS preprocessor",
+        "d": "A build tool"
+      },
+      {
+        "id": 3,
+        "for": "react",
+        "title": "What does `useState` hook do?",
+        "right": "Adds state to a functional component",
+        "a": "Adds props to a functional component",
+        "b": "Adds state to a functional component",
+        "c": "Adds lifecycle methods to a functional component",
+        "d": "Adds event listeners to a functional component"
+      },
+      {
+        "id": 4,
+        "for": "react",
+        "title": "What does `useEffect` hook do?",
+        "right": "Performs side effects in functional components",
+        "a": "Updates the component's state",
+        "b": "Performs side effects in functional components",
+        "c": "Renders the component",
+        "d": "Handles component events"
+      },
+      {
+        "id": 5,
+        "for": "react",
+        "title": "What is the purpose of `props` in React?",
+        "right": "To pass data from a parent component to a child component",
+        "a": "To manage component state",
+        "b": "To pass data from a parent component to a child component",
+        "c": "To handle component events",
+        "d": "To define component styles"
+      },
+      {
+        "id": 6,
+        "for": "react",
+        "title": "What is the difference between `state` and `props`?",
+        "right": "State is internal to a component, props are external",
+        "a": "State is immutable, props are mutable",
+        "b": "State is external to a component, props are internal",
+        "c": "State is for styling, props are for data",
+        "d": "State is internal to a component, props are external"
+      },
+      {
+        "id": 7,
+        "for": "react",
+        "title": "How do you conditionally render elements in React?",
+        "right": "Using if statements or ternary operators",
+        "a": "Using loops",
+        "b": "Using if statements or ternary operators",
+        "c": "Using switch statements",
+        "d": "Using map functions"
+      },
+      {
+        "id": 8,
+        "for": "react",
+        "title": "What is the role of keys in React lists?",
+        "right": "To help React identify which items have changed, added, or removed",
+        "a": "To style list items",
+        "b": "To help React identify which items have changed, added, or removed",
+        "c": "To add event listeners to list items",
+        "d": "To store data associated with list items"
+      },
+      {
+        "id": 9,
+        "for": "react",
+        "title": "How do you pass data down to child components?",
+        "right": "Through props",
+        "a": "Through state",
+        "b": "Through props",
+        "c": "Through context",
+        "d": "Through refs"
+      },
+      {
+        "id": 10,
+        "for": "react",
+        "title": "What is React Context API used for?",
+        "right": "To pass data through the component tree without prop drilling",
+        "a": "To manage component state",
+        "b": "To pass data through the component tree without prop drilling",
+        "c": "To handle component events",
+        "d": "To define component styles"
+      },
+      {
+        "id": 11,
+        "for": "react",
+        "title": "What is a higher-order component (HOC)?",
+        "right": "A function that takes a component and returns a new enhanced component",
+        "a": "A component with multiple child components",
+        "b": "A function that takes a component and returns a new enhanced component",
+        "c": "A component that uses context API",
+        "d": "A component that uses hooks"
+      },
+      {
+        "id": 12,
+        "for": "react",
+        "title": "What is the purpose of `ref` in React?",
+        "right": "To directly access the DOM element",
+        "a": "To manage component state",
+        "b": "To pass data to child components",
+        "c": "To directly access the DOM element",
+        "d": "To handle component events"
+      },
+      {
+        "id": 13,
+        "for": "react",
+        "title": "What is virtual DOM?",
+        "right": "An in-memory representation of the actual DOM",
+        "a": "A faster version of the real DOM",
+        "b": "An in-memory representation of the actual DOM",
+        "c": "A way to style React components",
+        "d": "A way to handle events in React"
+      },
+      {
+        "id": 14,
+        "for": "react",
+        "title": "What is reconciliation in React?",
+        "right": "The process of updating the actual DOM efficiently",
+        "a": "The process of rendering components",
+        "b": "The process of updating the actual DOM efficiently",
+        "c": "The process of handling events",
+        "d": "The process of creating components"
+      },
+      {
+        "id": 15,
+        "for": "react",
+        "title": "How do you prevent default behavior of an event?",
+        "right": "Using `event.preventDefault()`",
+        "a": "Using `event.stopPropagation()`",
+        "b": "Using `event.preventDefault()`",
+        "c": "Using `event.stopImmediatePropagation()`",
+        "d": "Using `event.cancel()`"
+      },
+      {
+        "id": 16,
+        "for": "react",
+        "title": "What is Fragment in React?",
+        "right": "A way to group elements without adding extra nodes to the DOM",
+        "a": "A type of component",
+        "b": "A way to group elements without adding extra nodes to the DOM",
+        "c": "A way to style components",
+        "d": "A way to handle events"
+      },
+      {
+        "id": 17,
+        "for": "react",
+        "title": "What is the purpose of `React.StrictMode`?",
+        "right": "To highlight potential problems in your application",
+        "a": "To improve performance",
+        "b": "To highlight potential problems in your application",
+        "c": "To enable server-side rendering",
+        "d": "To manage component state"
+      },
+      {
+        "id": 18,
+        "for": "react",
+        "title": "What is the difference between functional and class components?",
+        "right": "Functional components are simpler and use hooks, class components use lifecycle methods",
+        "a": "Functional components are faster, class components are slower",
+        "b": "Functional components use state, class components don't",
+        "c": "Functional components are legacy, class components are modern",
+        "d": "Functional components are simpler and use hooks, class components use lifecycle methods"
+      },
+      {
+        "id": 19,
+        "for": "react",
+        "title": "How to update state correctly in a React functional component?",
+        "right": "Using the setState function from useState hook",
+        "a": "Directly modifying the state variable",
+        "b": "Using the setState function from useState hook",
+        "c": "Using a lifecycle method",
+        "d": "Using a callback function"
+      },
+      [
+        {
+          "id": 21,
+          "for": "javascript",
+          "title": "What is the difference between `==` and `===` in JavaScript?",
+          "right": "`===` checks for strict equality (value and type), `==` performs type coercion",
+          "a": "`==` checks for strict equality, `===` performs type coercion",
+          "b": "`===` checks for strict equality (value and type), `==` performs type coercion",
+          "c": "There is no difference",
+          "d": "`==` is faster than `===`"
+        },
+        {
+          "id": 22,
+          "for": "javascript",
+          "title": "What is hoisting in JavaScript?",
+          "right": "The behavior where variables and function declarations are moved to the top of their scope",
+          "a": "A way to optimize JavaScript code",
+          "b": "The behavior where variables and function declarations are moved to the top of their scope",
+          "c": "A type of error in JavaScript",
+          "d": "A way to create closures"
+        },
+        {
+          "id": 23,
+          "for": "javascript",
+          "title": "What is a closure in JavaScript?",
+          "right": "A function that has access to variables from its surrounding scope even after that scope has finished executing",
+          "a": "A type of loop",
+          "b": "A function that has access to variables from its surrounding scope even after that scope has finished executing",
+          "c": "A way to create objects",
+          "d": "A type of error"
+        },
+        {
+          "id": 24,
+          "for": "javascript",
+          "title": "What is the `this` keyword in JavaScript?",
+          "right": "It refers to the object that is executing the current function",
+          "a": "It always refers to the global object",
+          "b": "It refers to the object that is executing the current function",
+          "c": "It is a reserved keyword with no meaning",
+          "d": "It refers to the current function"
+        },
+        {
+          "id": 25,
+          "for": "javascript",
+          "title": "What is prototypal inheritance in JavaScript?",
+          "right": "Objects inherit properties and methods from their prototype object",
+          "a": "Objects inherit properties and methods from their parent class",
+          "b": "Objects inherit properties and methods from their prototype object",
+          "c": "A type of class inheritance",
+          "d": "A way to create functions"
+        },
+        {
+          "id": 26,
+          "for": "javascript",
+          "title": "What is the difference between `let`, `const`, and `var`?",
+          "right": "`let` and `const` are block-scoped, `var` is function-scoped",
+          "a": "`let`, `const`, and `var` are all block-scoped",
+          "b": "`let` and `const` are function-scoped, `var` is block-scoped",
+          "c": "`let`, `const`, and `var` are all globally scoped",
+          "d": "`let` and `const` are block-scoped, `var` is function-scoped"
+        },
+        {
+          "id": 27,
+          "for": "javascript",
+          "title": "What is an asynchronous operation in JavaScript?",
+          "right": "An operation that doesn't block the execution of other code",
+          "a": "An operation that always completes immediately",
+          "b": "An operation that blocks the execution of other code",
+          "c": "An operation that is always synchronous",
+          "d": "An operation that doesn't block the execution of other code"
+        },
+        {
+          "id": 28,
+          "for": "javascript",
+          "title": "How do you handle asynchronous operations in JavaScript?",
+          "right": "Using promises or async/await",
+          "a": "Using callbacks",
+          "b": "Using promises or async/await",
+          "c": "Using synchronous functions",
+          "d": "Using timers"
+        },
+        {
+          "id": 29,
+          "for": "javascript",
+          "title": "What is a promise in JavaScript?",
+          "right": "An object representing the eventual completion (or failure) of an asynchronous operation",
+          "a": "A type of function",
+          "b": "An object representing the eventual completion (or failure) of an asynchronous operation",
+          "c": "A type of variable",
+          "d": "A way to handle events"
+        },
+        {
+          "id": 30,
+          "for": "javascript",
+          "title": "What is async/await in JavaScript?",
+          "right": "A syntax for writing asynchronous code that makes it look and behave a bit more like synchronous code",
+          "a": "A type of loop",
+          "b": "A syntax for writing asynchronous code that makes it look and behave a bit more like synchronous code",
+          "c": "A way to create objects",
+          "d": "A type of error"
+        },
+        {
+          "id": 31,
+          "for": "javascript",
+          "title": "What is JSON?",
+          "right": "JavaScript Object Notation, a lightweight data-interchange format",
+          "a": "A JavaScript framework",
+          "b": "A JavaScript Object Notation, a lightweight data-interchange format",
+          "c": "A type of database",
+          "d": "A programming language"
+        },
+        {
+          "id": 32,
+          "for": "javascript",
+          "title": "How do you parse JSON data in JavaScript?",
+          "right": "Using `JSON.parse()`",
+          "a": "Using `JSON.stringify()`",
+          "b": "Using `eval()`",
+          "c": "Using `JSON.parse()`",
+          "d": "Using `parseInt()`"
+        },
+        {
+          "id": 33,
+          "for": "javascript",
+          "title": "How do you stringify a JavaScript object into JSON?",
+          "right": "Using `JSON.stringify()`",
+          "a": "Using `JSON.parse()`",
+          "b": "Using `toString()`",
+          "c": "Using `JSON.stringify()`",
+          "d": "Using `String()`"
+        },
+        {
+          "id": 34,
+          "for": "javascript",
+          "title": "What is the DOM (Document Object Model)?",
+          "right": "A programming interface for HTML and XML documents",
+          "a": "A type of database",
+          "b": "A programming interface for HTML and XML documents",
+          "c": "A JavaScript framework",
+          "d": "A way to style web pages"
+        },
+        {
+          "id": 35,
+          "for": "javascript",
+          "title": "How do you select elements in the DOM using JavaScript?",
+          "right": "Using methods like `getElementById`, `querySelector`, `querySelectorAll`",
+          "a": "Using CSS selectors directly",
+          "b": "Using methods like `getElementById`, `querySelector`, `querySelectorAll`",
+          "c": "Using XPath expressions",
+          "d": "Using jQuery"
+        },
+        {
+          "id": 36,
+          "for": "javascript",
+          "title": "What is an event listener in JavaScript?",
+          "right": "A function that is called when a specific event occurs on an element",
+          "a": "A type of loop",
+          "b": "A function that is called when a specific event occurs on an element",
+          "c": "A way to create objects",
+          "d": "A type of variable"
+        },
+        {
+          "id": 37,
+          "for": "javascript",
+          "title": "How do you add an event listener to an element?",
+          "right": "Using `addEventListener()`",
+          "a": "Using `attachEvent()`",
+          "b": "Using `addEventListener()`",
+          "c": "Using `onEvent()`",
+          "d": "Using `handleEvent()`"
+        },
+        {
+          "id": 38,
+          "for": "javascript",
+          "title": "What is the difference between `setInterval` and `setTimeout`?",
+          "right": "`setInterval` repeatedly calls a function, `setTimeout` calls a function once after a delay",
+          "a": "`setInterval` calls a function once, `setTimeout` repeatedly calls a function",
+          "b": "`setInterval` and `setTimeout` are the same",
+          "c": "`setInterval` is faster than `setTimeout`",
+          "d": "`setInterval` repeatedly calls a function, `setTimeout` calls a function once after a delay"
+        },
+        {
+          "id": 39,
+          "for": "javascript",
+          "title": "What is a callback function?",
+          "right": "A function passed as an argument to another function",
+          "a": "A function that always returns true",
+          "b": "A function that always returns false",
+          "c": "A function passed as an argument to another function",
+          "d": "A function that is never executed"
+        },
+        {
+          "id": 40,
+          "for": "javascript",
+          "title": "What is the purpose of `try...catch` in JavaScript?",
+          "right": "To handle errors gracefully and prevent the program from crashing",
+          "a": "To improve performance",
+          "b": "To handle errors gracefully and prevent the program from crashing",
+          "c": "To debug code",
+          "d": "To optimize code"
+        }
+      ]
+    ]
+  ]
+}
