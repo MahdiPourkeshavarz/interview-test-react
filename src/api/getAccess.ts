@@ -1,9 +1,10 @@
-import { USER_URL } from "../constants";
+import { PROFILES_URL, USER_URL } from "../constants";
 import { httpRequest } from "../lib/axiosConfig";
+import { userData } from "../types";
 
-export async function submitUser(formdata): Promise<boolean> {
-  const email = formdata.email;
-  const password = formdata.password;
+export async function submitUser(userData: userData): Promise<boolean> {
+  const email = userData.email;
+  const password = userData.password;
   try {
     const response = await httpRequest.post(USER_URL, {
       email,
@@ -13,6 +14,10 @@ export async function submitUser(formdata): Promise<boolean> {
     const refreshToken = await response.data.token.refreshToken;
     localStorage.setItem("accessToken", accessToken);
     localStorage.setItem("refreshToken", refreshToken);
+    await httpRequest.post(PROFILES_URL, {
+      email: userData.email,
+      username: userData.username,
+    });
     return true;
   } catch (e) {
     console.log(e);

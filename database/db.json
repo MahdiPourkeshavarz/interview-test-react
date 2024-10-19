@@ -117,14 +117,12 @@
     {
       "id": 1,
       "name": "react",
-      "persianName": "ری اکت",
       "quantity": 20,
       "timeUnit": 60
     },
     {
       "id": 2,
       "name": "javascript",
-      "persianName": "جاوا اسکریپت",
       "quantity": 20,
       "timeUnit": 60
     }
