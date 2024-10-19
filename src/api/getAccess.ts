@@ -1,4 +1,4 @@
-import { PROFILES_URL, USER_URL } from "../constants";
+import { USER_URL } from "../constants";
 import { httpRequest } from "../lib/axiosConfig";
 import { userData } from "../types";
 
@@ -10,14 +10,9 @@ export async function submitUser(userData: userData): Promise<boolean> {
       email,
       password,
     });
-    const accessToken = await response.data.token.accessToken;
-    const refreshToken = await response.data.token.refreshToken;
+    const accessToken = await response.data.accessToken;
     localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("refreshToken", refreshToken);
-    await httpRequest.post(PROFILES_URL, {
-      email: userData.email,
-      username: userData.username,
-    });
+    localStorage.setItem("username", userData.username);
     return true;
   } catch (e) {
     console.log(e);

@@ -8,7 +8,7 @@
   ],
   "tests": [
     {
-      "user": "adminzadeh",
+      "username": "adminzadeh",
       "topic": "react",
       "result": {
         "right": [
@@ -66,7 +66,7 @@
       "id": 1
     },
     {
-      "user": "adminzadeh",
+      "username": "adminzadeh",
       "topic": "javascript",
       "result": {
         "right": [
@@ -104,13 +104,6 @@
         ]
       },
       "id": 2
-    }
-  ],
-  "profiles": [
-    {
-      "id": 1,
-      "email": "admin@gmail.com",
-      "username": "adminzadeh"
     }
   ],
   "topics": [
