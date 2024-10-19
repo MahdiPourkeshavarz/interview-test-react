@@ -13,7 +13,6 @@ export async function submitUser(formdata): Promise<boolean> {
     const refreshToken = await response.data.token.refreshToken;
     localStorage.setItem("accessToken", accessToken);
     localStorage.setItem("refreshToken", refreshToken);
-
     return true;
   } catch (e) {
     console.log(e);

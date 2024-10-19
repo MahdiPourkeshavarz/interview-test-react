@@ -6,6 +6,8 @@ import { AuthenticationPage } from "../pages/authentication/AuthenticationPage";
 import { AdminLayout } from "../layout/admin/AdminLayout";
 import { AdminPage } from "../pages/admin/AdminPage";
 import { Toaster } from "react-hot-toast";
+import { QuestionsPage } from "../pages/questions/QuestionsPage";
+import { ResultsPage } from "../pages/results/ResultsPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <AdminPage />,
+          },
+          {
+            path: "/admin/questions",
+            element: <QuestionsPage />,
+          },
+          {
+            path: "/admin/results",
+            element: <ResultsPage />,
           },
         ],
       },
