@@ -110,21 +110,27 @@
     {
       "id": 1,
       "name": "react",
-      "quantity": 20,
-      "timeUnit": 60
+      "quantity": "20",
+      "timeUnit": "60"
     },
     {
       "id": 2,
       "name": "javascript",
-      "quantity": 20,
-      "timeUnit": 60
+      "quantity": "20",
+      "timeUnit": "50"
+    },
+    {
+      "name": "python",
+      "quantity": "20",
+      "timeUnit": "70",
+      "id": 3
     }
   ],
   "questions": [
     {
       "id": 1,
       "topic": "react",
-      "title": "Which of the answers are not a React component's life cycle?",
+      "title": "Which of the answers are not a React components life cycle?",
       "right": "Initialization",
       "a": "Mounting",
       "b": "Initialization",
@@ -156,7 +162,7 @@
       "topic": "react",
       "title": "What does `useEffect` hook do?",
       "right": "Performs side effects in functional components",
-      "a": "Updates the component's state",
+      "a": "Updates the components state",
       "b": "Performs side effects in functional components",
       "c": "Renders the component",
       "d": "Handles component events"
@@ -520,6 +526,216 @@
       "b": "To handle errors gracefully and prevent the program from crashing",
       "c": "To debug code",
       "d": "To optimize code"
+    },
+    {
+      "id": 41,
+      "topic": "python",
+      "title": "What is the output of `print(type(5))`?",
+      "right": "<class 'int'>",
+      "a": "<class 'str'>",
+      "b": "<class 'float'>",
+      "c": "<class 'int'>",
+      "d": "<class 'bool'>"
+    },
+    {
+      "id": 42,
+      "topic": "python",
+      "title": "What does `len()` function do?",
+      "right": "Returns the length of an object",
+      "a": "Prints the object",
+      "b": "Returns the length of an object",
+      "c": "Adds elements to an object",
+      "d": "Removes elements from an object"
+    },
+    {
+      "id": 43,
+      "topic": "python",
+      "title": "What is a list comprehension?",
+      "right": "A concise way to create lists",
+      "a": "A type of loop",
+      "b": "A concise way to create lists",
+      "c": "A way to define functions",
+      "d": "A way to handle exceptions"
+    },
+    {
+      "id": 44,
+      "topic": "python",
+      "title": "What does the `in` operator do?",
+      "right": "Checks if an item is in a sequence",
+      "a": "Adds an item to a sequence",
+      "b": "Removes an item from a sequence",
+      "c": "Checks if an item is in a sequence",
+      "d": "Sorts a sequence"
+    },
+    {
+      "id": 45,
+      "topic": "python",
+      "title": "What is a dictionary?",
+      "right": "A collection of key-value pairs",
+      "a": "An ordered sequence of items",
+      "b": "A collection of key-value pairs",
+      "c": "A set of unique items",
+      "d": "A tuple of items"
+    },
+    {
+      "id": 46,
+      "topic": "python",
+      "title": "What is a tuple?",
+      "right": "An ordered, immutable sequence of items",
+      "a": "An ordered, mutable sequence of items",
+      "b": "An unordered collection of unique items",
+      "c": "An ordered, immutable sequence of items",
+      "d": "A key-value pair collection"
+    },
+    {
+      "id": 47,
+      "topic": "python",
+      "title": "What is a set?",
+      "right": "An unordered collection of unique items",
+      "a": "An ordered sequence of items",
+      "b": "A collection of key-value pairs",
+      "c": "An unordered collection of unique items",
+      "d": "An ordered, immutable sequence of items"
+    },
+    {
+      "id": 48,
+      "topic": "python",
+      "title": "What does the `def` keyword do?",
+      "right": "Defines a function",
+      "a": "Defines a variable",
+      "b": "Defines a class",
+      "c": "Defines a function",
+      "d": "Defines a loop"
+    },
+    {
+      "id": 49,
+      "topic": "python",
+      "title": "What is the purpose of `try...except`?",
+      "right": "Handles exceptions",
+      "a": "Defines a loop",
+      "b": "Defines a function",
+      "c": "Handles exceptions",
+      "d": "Defines a class"
+    },
+    {
+      "id": 50,
+      "topic": "python",
+      "title": "What does `import` do?",
+      "right": "Imports modules",
+      "a": "Defines a class",
+      "b": "Imports modules",
+      "c": "Defines a function",
+      "d": "Handles exceptions"
+    },
+    {
+      "id": 51,
+      "topic": "python",
+      "title": "What is the output of `print(2**3)`?",
+      "right": "8",
+      "a": "6",
+      "b": "9",
+      "c": "8",
+      "d": "5"
+    },
+    {
+      "id": 52,
+      "topic": "python",
+      "title": "What does `//` operator do?",
+      "right": "Floor division",
+      "a": "Floating-point division",
+      "b": "Floor division",
+      "c": "Modulo operator",
+      "d": "Exponentiation"
+    },
+    {
+      "id": 53,
+      "topic": "python",
+      "title": "What does `%` operator do?",
+      "right": "Modulo operator",
+      "a": "Floor division",
+      "b": "Floating-point division",
+      "c": "Modulo operator",
+      "d": "Exponentiation"
+    },
+    {
+      "id": 54,
+      "topic": "python",
+      "title": "What is a for loop used for?",
+      "right": "Iterating over a sequence",
+      "a": "Conditional execution",
+      "b": "Iterating over a sequence",
+      "c": "Defining a function",
+      "d": "Handling exceptions"
+    },
+    {
+      "id": 55,
+      "topic": "python",
+      "title": "What is a while loop used for?",
+      "right": "Repeating a block of code while a condition is true",
+      "a": "Iterating over a sequence",
+      "b": "Conditional execution",
+      "c": "Repeating a block of code while a condition is true",
+      "d": "Defining a function"
+    },
+    {
+      "id": 56,
+      "topic": "python",
+      "title": "What is an if statement used for?",
+      "right": "Conditional execution",
+      "a": "Iterating over a sequence",
+      "b": "Conditional execution",
+      "c": "Defining a function",
+      "d": "Handling exceptions"
+    },
+    {
+      "id": 57,
+      "topic": "python",
+      "title": "What is the output of `print(True and False)`?",
+      "right": "False",
+      "a": "True",
+      "b": "False",
+      "c": "Error",
+      "d": "None"
+    },
+    {
+      "id": 58,
+      "topic": "python",
+      "title": "What is the output of `print(True or False)`?",
+      "right": "True",
+      "a": "False",
+      "b": "True",
+      "c": "Error",
+      "d": "None"
+    },
+    {
+      "id": 59,
+      "topic": "python",
+      "title": "What is the output of `print(not True)`?",
+      "right": "False",
+      "a": "True",
+      "b": "False",
+      "c": "Error",
+      "d": "None"
+    },
+    {
+      "id": 60,
+      "topic": "python",
+      "title": "What is the output of `print(len([1,2,3]))`?",
+      "right": "3",
+      "a": "2",
+      "b": "4",
+      "c": "3",
+      "d": "Error"
+    },
+    {
+      "topic": "python",
+      "title": "How do you open a file for writing in Python?",
+      "right": "f = open('myfile.txt', 'w')",
+      "a": "f = open('myfile.txt', 'r')",
+      "b": "f = open('myfile.txt', 'w')",
+      "c": "f = open('myfile.txt', 'a')",
+      "d": "f = open('myfile.txt', 'x')",
+      "id": 61
     }
   ]
 }

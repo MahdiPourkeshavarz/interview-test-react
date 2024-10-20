@@ -1,7 +1,7 @@
 import { TESTS_URL } from "../constants";
 import { httpRequest } from "../lib/axiosConfig";
 
-export async function getQuestions<T>(options: string): Promise<Partial<T>> {
+export async function getResults<T>(options: string): Promise<Partial<T>> {
   try {
     const response = await httpRequest.get(TESTS_URL + options);
     return response.data;

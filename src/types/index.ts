@@ -18,6 +18,7 @@ export interface questionData {
   b: string;
   c: string;
   d: string;
+  id?: number;
 }
 
 export interface resultData {

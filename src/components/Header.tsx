@@ -7,7 +7,6 @@ export function Header() {
         <div className="flex items-center">
           <div className="w-10 h-10 bg-gray-600 rounded-full flex items-center justify-center">
             <img src="./logo.png" alt="quiz" />
-            <span className="text-sm font-bold">Logo</span>
           </div>
         </div>
 
