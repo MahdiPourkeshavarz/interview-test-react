@@ -8,6 +8,8 @@ export interface userData {
   email: string;
   password: string;
   username: string;
+  createpassword?: string;
+  repeatpassword?: string;
 }
 
 export interface questionData {

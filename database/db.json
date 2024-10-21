@@ -4,6 +4,11 @@
       "id": 1,
       "email": "admin@gmail.com",
       "password": "123456"
+    },
+    {
+      "email": "mahdi@gmail.com",
+      "password": "$2a$10$aKlFUp5mKLUtAcOvJdMdHuPxFe3FMgtzTLiDEkSQVjqd6RGt01wWK",
+      "id": 2
     }
   ],
   "tests": [

@@ -2,11 +2,16 @@ import { USER_URL } from "../constants";
 import { httpRequest } from "../lib/axiosConfig";
 import { userData } from "../types";
 
-export async function submitUser(userData: userData): Promise<boolean> {
+export async function submitUser(
+  userData: userData,
+  mode: string
+): Promise<boolean> {
   const email = userData.email;
-  const password = userData.password;
+  const password =
+    mode === "login" ? userData.password : userData.repeatpassword;
+
   try {
-    const response = await httpRequest.post(`${USER_URL}/login`, {
+    const response = await httpRequest.post(`${USER_URL}/${mode}`, {
       email,
       password,
     });

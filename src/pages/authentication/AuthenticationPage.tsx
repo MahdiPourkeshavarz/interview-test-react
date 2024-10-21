@@ -12,20 +12,27 @@ export function AuthenticationPage() {
   const { setUsername } = useStore();
   const navigate = useNavigate();
 
+  const [mode, setMode] = useState("login");
+
+  const toggleMode = () => {
+    setMode(mode === "login" ? "register" : "login");
+  };
+
   async function onSubmit(data: userData) {
     setIsLoading(true);
-    const isActionSuccessful = await submitUser(data);
+    const isActionSuccessful = await submitUser(data, mode);
     if (isActionSuccessful) {
-      toast.success("ورود به پنل ادمین با موفقیت انجام شد", {
+      toast.success("You have LogedIn", {
         position: "bottom-center",
       });
       setUsername(data.username);
       setTimeout(() => {
         setIsLoading(false);
-        navigate("/admin");
+        navigate("/home");
       }, 1000);
     } else {
-      toast.error("خطا در ورود به پنل ادمین. لطفا دوباره تلاش کنید.", {
+      setIsLoading(false);
+      toast.error("Error, try again!", {
         position: "bottom-center",
       });
     }
@@ -39,23 +46,44 @@ export function AuthenticationPage() {
       >
         <div className="flex flex-1 items-center justify-center p-8">
           <div
-            className={`w-full max-w-md rounded-lg bg-slate-100 p-8 text-black shadow-lg dark:bg-slate-900 dark:text-white`}
+            className={`w-full max-w-md rounded-lg bg-slate-100 p-8 text-black shadow-lg`}
           >
             <header className="mb-6 text-center">
-              <h1 className="text-2xl font-bold">به گجت هاب خوش آمدید</h1>
+              <h1 className="text-2xl font-bold">Welcome to Quiz Hub</h1>
             </header>
             <section className="form-block h-fit transition-transform duration-500 ease-in-out">
-              <h2 className="mb-4 text-center text-xl font-semibold">ورود</h2>
-              <AuthenticationForm isLoading={isLoading} onSubmit={onSubmit} />
+              <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                {mode === "login" ? "Log In" : "Sign Up"}
+              </h2>
+              <div className="text-center mb-4">
+                <span className="text-gray-600">
+                  {mode === "login" ? "Don't" : "Already"} have an account?
+                  <span
+                    className="text-blue-500 cursor-pointer"
+                    onClick={toggleMode}
+                  >
+                    {"  "}Click here
+                  </span>
+                  <button
+                    className="text-blue-500 ml-1 transition-transform duration-300 transform hover:scale-105"
+                    onClick={toggleMode}
+                  >
+                    &#8594;
+                  </button>
+                </span>
+              </div>
+              <AuthenticationForm
+                isLoading={isLoading}
+                onSubmit={onSubmit}
+                mode={mode}
+              />
             </section>
           </div>
         </div>
         <div className="hidden flex-1 items-center justify-center p-8 md:flex">
           <div className="text-center text-white">
-            <h2 className="text-3xl font-bold">
-              به جمع خانواده گجت هاب بپیوندید
-            </h2>
-            <p className="mt-4 text-xl">اینجا کسی دست خالی برنمیگرده!.</p>
+            <h2 className="text-3xl font-bold">Join Us Today!</h2>
+            <p className="mt-4 text-xl">And Test Your Knowledge</p>
           </div>
         </div>
       </div>
