@@ -22,9 +22,9 @@ export function TestResultCard({ resultData }: props) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-4 rounded-lg shadow-lg border border-gray-300">
+    <div className="w-full my-4 rounded-lg shadow-lg border border-gray-300">
       <div
-        className="flex items-center justify-between p-4 cursor-pointer"
+        className="flex items-center justify-between px-4 py-6 cursor-pointer"
         onClick={toggleExpand}
       >
         <div>

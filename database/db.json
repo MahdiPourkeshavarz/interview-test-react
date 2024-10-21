@@ -106,6 +106,205 @@
         ]
       },
       "id": 2
+    },
+    {
+      "username": "adminzadeh",
+      "topic": "javascript",
+      "numberofquestions": "20",
+      "result": {
+        "right": [
+          {
+            "id": 22,
+            "title": "What is hoisting in JavaScript?",
+            "right": "The behavior where variables and function declarations are moved to the top of their scope",
+            "a": "A way to optimize JavaScript code",
+            "b": "The behavior where variables and function declarations are moved to the top of their scope",
+            "c": "A type of error in JavaScript",
+            "d": "A way to create closures"
+          },
+          {
+            "id": 24,
+            "title": "What is the `this` keyword in JavaScript?",
+            "right": "It refers to the object that is executing the current function",
+            "a": "It always refers to the global object",
+            "b": "It refers to the object that is executing the current function",
+            "c": "It is a reserved keyword with no meaning",
+            "d": "It refers to the current function"
+          },
+          {
+            "id": 26,
+            "title": "What is the difference between `let`, `const`, and `var`?",
+            "right": "`let` and `const` are block-scoped, `var` is function-scoped",
+            "a": "`let`, `const`, and `var` are all block-scoped",
+            "b": "`let` and `const` are function-scoped, `var` is block-scoped",
+            "c": "`let`, `const`, and `var` are all globally scoped",
+            "d": "`let` and `const` are block-scoped, `var` is function-scoped"
+          },
+          {
+            "id": 27,
+            "title": "What is an asynchronous operation in JavaScript?",
+            "right": "An operation that doesn't block the execution of other code",
+            "a": "An operation that always completes immediately",
+            "b": "An operation that blocks the execution of other code",
+            "c": "An operation that is always synchronous",
+            "d": "An operation that doesn't block the execution of other code"
+          }
+        ],
+        "wrong": [
+          {
+            "id": 23,
+            "title": "What is a closure in JavaScript?",
+            "right": "A function that has access to variables from its surrounding scope even after that scope has finished executing",
+            "a": "A type of loop",
+            "b": "A function that has access to variables from its surrounding scope even after that scope has finished executing",
+            "c": "A way to create objects",
+            "d": "A type of error"
+          },
+          {
+            "id": 29,
+            "title": "What is a promise in JavaScript?",
+            "right": "An object representing the eventual completion (or failure) of an asynchronous operation",
+            "a": "A type of function",
+            "b": "An object representing the eventual completion (or failure) of an asynchronous operation",
+            "c": "A type of variable",
+            "d": "A way to handle events"
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 20,
+            "title": "What is the difference between `==` and `===` in JavaScript?",
+            "right": "`===` checks for strict equality (value and type), `==` performs type coercion",
+            "a": "`==` checks for strict equality, `===` performs type coercion",
+            "b": "`===` checks for strict equality (value and type), `==` performs type coercion",
+            "c": "There is no difference",
+            "d": "`==` is faster than `===`"
+          },
+          {
+            "id": 25,
+            "title": "What is prototypal inheritance in JavaScript?",
+            "right": "Objects inherit properties and methods from their prototype object",
+            "a": "Objects inherit properties and methods from their parent class",
+            "b": "Objects inherit properties and methods from their prototype object",
+            "c": "A type of class inheritance",
+            "d": "A way to create functions"
+          }
+        ]
+      },
+      "id": 3
+    },
+    {
+      "username": "adminzadeh",
+      "topic": "react",
+      "numberofquestions": "20",
+      "result": {
+        "right": [
+          {
+            "id": 5,
+            "title": "What is the purpose of `props` in React?",
+            "right": "To pass data from a parent component to a child component",
+            "a": "To manage component state",
+            "b": "To pass data from a parent component to a child component",
+            "c": "To handle component events",
+            "d": "To define component styles"
+          },
+          {
+            "id": 7,
+            "title": "How do you conditionally render elements in React?",
+            "right": "Using if statements or ternary operators",
+            "a": "Using loops",
+            "b": "Using if statements or ternary operators",
+            "c": "Using switch statements",
+            "d": "Using map functions"
+          },
+          {
+            "id": 12,
+            "title": "What is the purpose of `ref` in React?",
+            "right": "To directly access the DOM element",
+            "a": "To manage component state",
+            "b": "To pass data to child components",
+            "c": "To directly access the DOM element",
+            "d": "To handle component events"
+          },
+          {
+            "id": 16,
+            "title": "What is Fragment in React?",
+            "right": "A way to group elements without adding extra nodes to the DOM",
+            "a": "A type of component",
+            "b": "A way to group elements without adding extra nodes to the DOM",
+            "c": "A way to style components",
+            "d": "A way to handle events"
+          }
+        ],
+        "wrong": [
+          {
+            "id": 1,
+            "title": "Which of the answers are not a React components life cycle?",
+            "right": "Initialization",
+            "a": "Mounting",
+            "b": "Initialization",
+            "c": "Updating",
+            "d": "Unmounting"
+          },
+          {
+            "id": 9,
+            "title": "How do you pass data down to child components?",
+            "right": "Through props",
+            "a": "Through state",
+            "b": "Through props",
+            "c": "Through context",
+            "d": "Through refs"
+          },
+          {
+            "id": 14,
+            "title": "What is reconciliation in React?",
+            "right": "The process of updating the actual DOM efficiently",
+            "a": "The process of rendering components",
+            "b": "The process of updating the actual DOM efficiently",
+            "c": "The process of handling events",
+            "d": "The process of creating components"
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 3,
+            "title": "What does `useState` hook do?",
+            "right": "Adds state to a functional component",
+            "a": "Adds props to a functional component",
+            "b": "Adds state to a functional component",
+            "c": "Adds lifecycle methods to a functional component",
+            "d": "Adds event listeners to a functional component"
+          },
+          {
+            "id": 4,
+            "title": "What does `useEffect` hook do?",
+            "right": "Performs side effects in functional components",
+            "a": "Updates the components state",
+            "b": "Performs side effects in functional components",
+            "c": "Renders the component",
+            "d": "Handles component events"
+          },
+          {
+            "id": 8,
+            "title": "What is the role of keys in React lists?",
+            "right": "To help React identify which items have changed, added, or removed",
+            "a": "To style list items",
+            "b": "To help React identify which items have changed, added, or removed",
+            "c": "To add event listeners to list items",
+            "d": "To store data associated with list items"
+          },
+          {
+            "id": 17,
+            "title": "What is the purpose of `React.StrictMode`?",
+            "right": "To highlight potential problems in your application",
+            "a": "To improve performance",
+            "b": "To highlight potential problems in your application",
+            "c": "To enable server-side rendering",
+            "d": "To manage component state"
+          }
+        ]
+      },
+      "id": 4
     }
   ],
   "topics": [
