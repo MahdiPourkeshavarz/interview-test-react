@@ -161,7 +161,6 @@ export function ResultsPage() {
         </div>
 
         <div className="mt-4 flex justify-center">
-          {console.log(resultsData?.totalPages)}
           {resultsData &&
             generatePaginationButtons(resultsData?.totalPages as number)}
         </div>
