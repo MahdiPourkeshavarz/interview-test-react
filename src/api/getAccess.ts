@@ -1,19 +1,17 @@
 import { USER_URL } from "../constants";
 import { httpRequest } from "../lib/axiosConfig";
+import { userData } from "../types";
 
-export async function submitUser(formdata): Promise<boolean> {
-  const email = formdata.email;
-  const password = formdata.password;
+export async function submitUser(userData: userData): Promise<boolean> {
+  const email = userData.email;
+  const password = userData.password;
   try {
-    const response = await httpRequest.post(USER_URL, {
+    const response = await httpRequest.post(`${USER_URL}/login`, {
       email,
       password,
     });
-    const accessToken = await response.data.token.accessToken;
-    const refreshToken = await response.data.token.refreshToken;
+    const accessToken = await response.data.accessToken;
     localStorage.setItem("accessToken", accessToken);
-    localStorage.setItem("refreshToken", refreshToken);
-
     return true;
   } catch (e) {
     console.log(e);
