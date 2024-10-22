@@ -28,7 +28,7 @@ export function ResultsPage() {
 
   const { data: topicsList, isLoading: isTopicsLoading } = useQuery({
     queryKey: ["list"],
-    queryFn: () => getTopics(),
+    queryFn: () => getTopics(""),
   });
 
   useEffect(() => {
@@ -132,7 +132,7 @@ export function ResultsPage() {
               value={selectedTopic === "" ? "Topics" : selectedTopic}
             >
               <option value="">Topics</option>
-              {topicsList?.map((topic: topicData) => (
+              {topicsList?.topics.map((topic: topicData) => (
                 <option value={topic.name} key={topic.timeUnit}>
                   {topic.name}
                 </option>

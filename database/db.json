@@ -316,17 +316,20 @@
     {
       "id": 1,
       "name": "react",
+      "imgSrc": "https://jslib.dev/wp-content/uploads/2022/03/Reactlogo.jpg",
       "quantity": "20",
       "timeUnit": "60"
     },
     {
       "id": 2,
       "name": "javascript",
+      "imgSrc": "https://i.morioh.com/2023/10/04/8621719f.webp",
       "quantity": "20",
       "timeUnit": "50"
     },
     {
       "name": "python",
+      "imgSrc": "https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png",
       "quantity": "20",
       "timeUnit": "70",
       "id": 3

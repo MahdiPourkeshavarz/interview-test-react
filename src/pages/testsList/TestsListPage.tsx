@@ -1,51 +1,34 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { getQuestions } from "../../api/getQuestions";
 import { getTopics } from "../../api/getTopics";
-import { questionData, topicData } from "../../types";
-import { AdminQuestionCard } from "../../components/AdminQuestionCard";
+import { topicData } from "../../types";
+import { TestCard } from "./components/TestCard";
 
-export function QuestionsPage() {
+export function TestsListPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [options, setOptions] = useState("");
   const [currentPage, setCurrentPage] = useState(
     Number(searchParams.get("_page")) || 1
   );
-  const [selectedTopic, setSelectedTopic] = useState(
-    searchParams.get("topic_like") || ""
-  );
-
-  const {
-    data: originalData,
-    isLoading,
-    refetch,
-  } = useQuery({
-    queryKey: ["question", options],
-    queryFn: () => getQuestions(options),
-  });
 
   const { data: topicsList, isLoading: isTopicsLoading } = useQuery({
     queryKey: ["list"],
-    queryFn: () => getTopics(""),
+    queryFn: () => getTopics(options),
   });
 
   useEffect(() => {
     const queryParams = new URLSearchParams();
 
-    if (selectedTopic) {
-      queryParams.set("topic_like", selectedTopic);
-    }
-
     queryParams.set("_page", currentPage.toString());
-    queryParams.set("_limit", "6");
+    queryParams.set("_limit", "3");
 
     const queryString = `?${queryParams.toString()}`;
 
     setSearchParams(queryParams);
 
     setOptions(queryString);
-  }, [currentPage, selectedTopic, setSearchParams]);
+  }, [currentPage, setSearchParams]);
 
   function handlePageChange(page: number) {
     setCurrentPage(page);
@@ -113,46 +96,20 @@ export function QuestionsPage() {
 
   return (
     <>
-      <div className="flex flex-col px-4 py-8">
-        {!isTopicsLoading && (
-          <select
-            className="w-40 rounded-lg bg-slate-200 px-2 py-1 dark:text-blue-500"
-            name="categoryList"
-            id="categoryList"
-            onChange={(e) => {
-              setSelectedTopic(e.target.value);
-              setCurrentPage(1);
-            }}
-            value={selectedTopic === "" ? "Topics" : selectedTopic}
-          >
-            <option value="">Topics</option>
-            {topicsList?.topics.map((topic: topicData) => (
-              <option value={topic.name} key={topic.timeUnit}>
-                {topic.name}
-              </option>
-            ))}
-          </select>
-        )}
-
-        <div className="mt-8 grid grid-cols-3 gap-8 sm:grid-cols-1 md:grid-cols-2">
-          {isLoading ? (
+      <div className="myContainer flex flex-col px-4 py-8">
+        <div className="mt-8 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
+          {isTopicsLoading ? (
             <p>Loading...</p>
           ) : (
-            originalData?.questions?.map(
-              (question: questionData, idx: number) => (
-                <AdminQuestionCard
-                  key={idx}
-                  question={question}
-                  refetch={() => refetch()}
-                />
-              )
-            )
+            topicsList?.topics?.map((topic: topicData, idx: number) => (
+              <TestCard key={idx} test={topic} />
+            ))
           )}
         </div>
 
         <div className="mt-4 flex justify-center">
-          {originalData &&
-            generatePaginationButtons(originalData?.totalPages as number)}
+          {topicsList &&
+            generatePaginationButtons(topicsList?.totalPages as number)}
         </div>
       </div>
     </>

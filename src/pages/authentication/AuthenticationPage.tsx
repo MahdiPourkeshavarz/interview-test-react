@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthenticationForm } from "./components/AuthForm/AuthenticationForm";
 import toast from "react-hot-toast";
 import { useState } from "react";
-import { submitUser } from "../../api/getAccess";
+import { submitUser } from "../../api/submitUser";
 import { useStore } from "../../context/store";
 import { userData } from "../../types";
 

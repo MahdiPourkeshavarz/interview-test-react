@@ -22,18 +22,20 @@ export function ErrorPage() {
         </div>
 
         <h1 className="mb-4 text-4xl font-semibold text-gray-800">
-          مشکلی برایتان پیش آمده!
+          oops! this goes to nowhere
         </h1>
 
         <p className="mb-6 text-lg text-gray-600">
-          این مسیری که اومدی به ناکجا آباد میرسه پس همینو برگرد
+          there is nothing that you can find here
         </p>
+
+        <p className="text-xl text-black my-5">Go Home</p>
 
         <Link
           to="/home"
           className="inline-block rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white transition hover:bg-blue-700"
         >
-          برو به صفحه اصلی
+          Home
         </Link>
       </div>
     </div>

@@ -1,4 +1,20 @@
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthModal } from "./components/AdminAuthModal";
+
 export function LandingPage() {
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function handleProceedToCheckout() {
+    const username = localStorage.getItem("username");
+    if (!username || username !== "adminzadeh") {
+      setIsModalOpen(true);
+    } else {
+      navigate("/admin");
+    }
+  }
+
   return (
     <>
       <div
@@ -16,29 +32,30 @@ export function LandingPage() {
           </p>
 
           <div className="mt-10 space-y-4 sm:space-y-0 sm:space-x-6 flex flex-col sm:flex-row justify-center">
-            <a
-              href="/home"
+            <Link
+              to="/home"
               className="inline-block px-8 py-3 text-lg font-semibold bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out"
             >
               Go to Home
-            </a>
-            <a
-              href="/auth"
+            </Link>
+            <Link
+              to="/auth"
               className="inline-block px-8 py-3 text-lg font-semibold bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition duration-300 ease-in-out"
             >
               Login or Signup
-            </a>
+            </Link>
           </div>
 
           <div className="mt-8">
-            <a
-              href="/admin"
-              className="inline-block px-6 py-2 text-base font-medium text-gray-600 bg-gray-200 rounded-full shadow hover:bg-gray-300 transition duration-300 ease-in-out"
+            <button
+              onClick={handleProceedToCheckout}
+              className="inline-block px-6 py-2 text-base font-medium text-gray-600 bg-gray-200 rounded-full shadow border-none hover:bg-gray-300 transition duration-300 ease-in-out"
             >
               Admin Panel
-            </a>
+            </button>
           </div>
         </div>
+        <AuthModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </>
   );

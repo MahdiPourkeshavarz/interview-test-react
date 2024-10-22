@@ -8,6 +8,8 @@ import { AdminPage } from "../pages/admin/AdminPage";
 import { Toaster } from "react-hot-toast";
 import { QuestionsPage } from "../pages/questions/QuestionsPage";
 import { ResultsPage } from "../pages/results/ResultsPage";
+import { HomePage } from "../pages/home/HomePage";
+import { TestsListPage } from "../pages/testsList/TestsListPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
             element: <ResultsPage />,
           },
         ],
+      },
+      {
+        path: "/home",
+        element: <HomePage />,
+      },
+      {
+        path: "/home/tests",
+        element: <TestsListPage />,
       },
     ],
   },

@@ -57,7 +57,7 @@ export function CreateQuestion() {
 
   const { data: topicsList, refetch } = useQuery({
     queryKey: ["list"],
-    queryFn: () => getTopics(),
+    queryFn: () => getTopics(""),
   });
   const handleAddQuestion = async () => {
     if (
@@ -108,7 +108,7 @@ export function CreateQuestion() {
           onChange={(e) => setSelectedCategory(e.target.value)}
           required
         >
-          {topicsList?.map((category: topicData) => (
+          {topicsList?.topics?.map((category: topicData) => (
             <MenuItem key={category?.timeUnit} value={category?.name}>
               {category?.name}
             </MenuItem>

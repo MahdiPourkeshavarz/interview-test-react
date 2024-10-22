@@ -13,16 +13,15 @@ import { CreateQuestion } from "./components/question/CreateQuestionDropdown";
 
 export function AdminPage() {
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   const username = localStorage.getItem("username");
-  //   if (!username || username !== "adminzadeh") {
-  //     toast.error("عدم دسترسی مجاز!", {
-  //       position: "bottom-center",
-  //     });
-  //     navigate("/");
-  //   }
-  // }, []);
+  const username = localStorage.getItem("username");
+  useEffect(() => {
+    if (!username || username !== "adminzadeh") {
+      toast.error("عدم دسترسی مجاز!", {
+        position: "bottom-center",
+      });
+      navigate("/");
+    }
+  }, [username]);
   return (
     <>
       <div className="myContainer mx-auto p-4 md:px-14 lg:px-32">

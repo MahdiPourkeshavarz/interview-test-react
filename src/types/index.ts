@@ -2,6 +2,7 @@ export interface topicData {
   name: string;
   quantity: number;
   timeUnit: number;
+  imgSrc: string;
 }
 
 export interface userData {

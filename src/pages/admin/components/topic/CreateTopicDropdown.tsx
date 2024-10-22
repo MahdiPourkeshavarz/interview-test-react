@@ -12,6 +12,12 @@ export function CreateTopic() {
   } = useFieldValidation("", "english");
 
   const {
+    value: topicSrcValue,
+    isValid: isSrcValid,
+    setValue: setTopicSrcValue,
+  } = useFieldValidation("", "");
+
+  const {
     value: quantityValue,
     isValid: isQuantityValid,
     setValue: setQuantityValue,
@@ -25,7 +31,7 @@ export function CreateTopic() {
 
   async function handleAddCategory() {
     if (!isValid || !isQuantityValid || !isTimeValid) {
-      toast.error("Inavalid topic. try again!", {
+      toast.error("Invalid topic. try again!", {
         position: "bottom-center",
       });
       return;
@@ -35,6 +41,7 @@ export function CreateTopic() {
         name: topicNameValue,
         quantity: quantityValue,
         timeUnit: timeValue,
+        imgSrc: topicSrcValue,
       });
       setTopicValue("");
       setQuantityValue("");
@@ -57,6 +64,15 @@ export function CreateTopic() {
           setTopicValue(e.target.value);
         }}
         error={topicNameValue === "" ? false : !isValid}
+      />
+      <TextField
+        label="Topic's Image Src"
+        variant="outlined"
+        value={topicSrcValue}
+        onChange={(e) => {
+          setTopicSrcValue(e.target.value);
+        }}
+        error={topicSrcValue === "" ? false : !isSrcValid}
       />
       <div className="grid grid-cols-2 px-4">
         <TextField

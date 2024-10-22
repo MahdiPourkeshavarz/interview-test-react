@@ -17,6 +17,9 @@ export async function submitUser(
     });
     const accessToken = await response.data.accessToken;
     localStorage.setItem("accessToken", accessToken);
+    if (accessToken) {
+      localStorage.setItem("username", userData.username);
+    }
     return true;
   } catch (e) {
     console.log(e);
