@@ -384,6 +384,255 @@
         ]
       },
       "id": 4
+    },
+    {
+      "username": "meitipk",
+      "topic": "javascript",
+      "numberofquestions": 20,
+      "result": {
+        "right": [
+          {
+            "id": 101,
+            "topic": "react",
+            "title": "What is the purpose of `ReactDOM.createPortal()`?",
+            "right": "To render children into a DOM node outside the parent component",
+            "options": [
+              "To create a new component",
+              "To manage state in components",
+              "To render children into a DOM node outside the parent component",
+              "To handle component errors"
+            ]
+          },
+          {
+            "id": 89,
+            "topic": "react",
+            "title": "What is the purpose of `useRef` in React?",
+            "right": "To persist values across renders without causing re-renders",
+            "options": [
+              "To force component updates",
+              "To persist values across renders without causing re-renders",
+              "To create controlled components",
+              "To manage state"
+            ]
+          },
+          {
+            "id": 19,
+            "title": "How to update state correctly in a React functional component?",
+            "topic": "react",
+            "right": "Using the setState function from useState hook",
+            "options": [
+              "Directly modifying the state variable",
+              "Using the setState function from useState hook",
+              "Using a lifecycle method",
+              "Using a callback function"
+            ]
+          },
+          {
+            "id": 107,
+            "topic": "react",
+            "title": "What is the purpose of `useMemo`?",
+            "right": "To memoize expensive functions and optimize performance",
+            "options": [
+              "To manage state",
+              "To memoize expensive functions and optimize performance",
+              "To handle routing",
+              "To control lifecycle methods"
+            ]
+          },
+          {
+            "id": 71,
+            "topic": "react",
+            "title": "What does `useReducer` hook do?",
+            "right": "Manages complex state logic in functional components",
+            "options": [
+              "Handles component styling",
+              "Manages complex state logic in functional components",
+              "Handles side effects",
+              "Manages event listeners"
+            ]
+          },
+          {
+            "id": 77,
+            "topic": "react",
+            "title": "What is the purpose of `React.lazy()`?",
+            "right": "To lazily load components as they are needed",
+            "options": [
+              "To eagerly load components",
+              "To lazily load components as they are needed",
+              "To render components immediately",
+              "To handle component errors"
+            ]
+          },
+          {
+            "id": 5,
+            "title": "What is the purpose of `props` in React?",
+            "topic": "react",
+            "right": "To pass data from a parent component to a child component",
+            "options": [
+              "To manage component state",
+              "To pass data from a parent component to a child component",
+              "To handle component events",
+              "To define component styles"
+            ]
+          },
+          {
+            "id": 83,
+            "topic": "react",
+            "title": "What is Redux used for in React?",
+            "right": "To manage global state",
+            "options": [
+              "To manage component lifecycle",
+              "To style components",
+              "To handle routing",
+              "To manage global state"
+            ]
+          },
+          {
+            "id": 4,
+            "title": "What does `useEffect` hook do?",
+            "topic": "react",
+            "right": "Performs side effects in functional components",
+            "options": [
+              "Updates the components state",
+              "Performs side effects in functional components",
+              "Renders the component",
+              "Handles component events"
+            ]
+          },
+          {
+            "id": 65,
+            "topic": "react",
+            "title": "What is a higher-order component in React?",
+            "right": "A function that takes a component and returns a new component",
+            "options": [
+              "A component that manages state",
+              "A function that takes a component and returns a new component",
+              "A component that handles events",
+              "A function that updates the DOM"
+            ]
+          },
+          {
+            "id": 16,
+            "title": "What is Fragment in React?",
+            "topic": "react",
+            "right": "A way to group elements without adding extra nodes to the DOM",
+            "options": [
+              "A type of component",
+              "A way to group elements without adding extra nodes to the DOM",
+              "A way to style components",
+              "A way to handle events"
+            ]
+          },
+          {
+            "id": 62,
+            "topic": "react",
+            "title": "What is React Router used for?",
+            "right": "To handle routing in React applications",
+            "options": [
+              "To manage state",
+              "To handle routing in React applications",
+              "To style components",
+              "To manage events"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "id": 7,
+            "title": "How do you conditionally render elements in React?",
+            "topic": "react",
+            "right": "Using if statements or ternary operators",
+            "options": [
+              "Using loops",
+              "Using if statements or ternary operators",
+              "Using switch statements",
+              "Using map functions"
+            ]
+          },
+          {
+            "id": 1,
+            "topic": "react",
+            "title": "Which of the answers are not a React components life cycle?",
+            "right": "Initialization",
+            "options": ["Mounting", "Initialization", "Updating", "Unmounting"]
+          },
+          {
+            "id": 14,
+            "title": "What is reconciliation in React?",
+            "topic": "react",
+            "right": "The process of updating the actual DOM efficiently",
+            "options": [
+              "The process of rendering components",
+              "The process of updating the actual DOM efficiently",
+              "The process of handling events",
+              "The process of creating components"
+            ]
+          },
+          {
+            "id": 74,
+            "topic": "react",
+            "title": "What is `React.Fragment` used for?",
+            "right": "To wrap multiple elements without adding extra nodes to the DOM",
+            "options": [
+              "To style components",
+              "To manage state",
+              "To wrap multiple elements without adding extra nodes to the DOM",
+              "To handle events"
+            ]
+          },
+          {
+            "id": 8,
+            "title": "What is the role of keys in React lists?",
+            "topic": "react",
+            "right": "To help React identify which items have changed, added, or removed",
+            "options": [
+              "To style list items",
+              "To help React identify which items have changed, added, or removed",
+              "To add event listeners to list items",
+              "To store data associated with list items"
+            ]
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 13,
+            "title": "What is virtual DOM?",
+            "topic": "react",
+            "right": "An in-memory representation of the actual DOM",
+            "options": [
+              "A faster version of the real DOM",
+              "An in-memory representation of the actual DOM",
+              "A way to style React components",
+              "A way to handle events in React"
+            ]
+          },
+          {
+            "id": 18,
+            "title": "What is the difference between functional and class components?",
+            "topic": "react",
+            "right": "Functional components are simpler and use hooks, class components use lifecycle methods",
+            "options": [
+              "Functional components are faster, class components are slower",
+              "Functional components use state, class components don't",
+              "Functional components are legacy, class components are modern",
+              "Functional components are simpler and use hooks, class components use lifecycle methods"
+            ]
+          },
+          {
+            "id": 10,
+            "title": "What is React Context API used for?",
+            "topic": "react",
+            "right": "To pass data through the component tree without prop drilling",
+            "options": [
+              "To manage component state",
+              "To pass data through the component tree without prop drilling",
+              "To handle component events",
+              "To define component styles"
+            ]
+          }
+        ]
+      },
+      "id": 7
     }
   ],
   "topics": [
@@ -399,12 +648,13 @@
       "name": "javascript",
       "imgSrc": "https://i.morioh.com/2023/10/04/8621719f.webp",
       "timeUnit": "50",
-      "participants": "2"
+      "participants": "3"
     },
     {
       "name": "python",
       "imgSrc": "https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png",
       "timeUnit": "70",
+      "participants": "0",
       "id": 3
     }
   ],

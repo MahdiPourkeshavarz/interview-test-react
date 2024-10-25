@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
 import { httpRequest } from "../../lib/axiosConfig";
-import { QUESTIONS_URL, TOPICS_URL } from "../../constants";
+import { QUESTIONS_URL, TESTS_URL, TOPICS_URL } from "../../constants";
 import { questionData } from "../../types";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { useStore } from "../../context/store";
 
 export function TestPage() {
   const data = useLoaderData();
+  const username = localStorage.getItem("username");
+  const navigate = useNavigate();
+
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [timeRemaining, setTimeRemaining] = useState(
     Number(data?.topic?.timeUnit) * 20
   );
   const [questionCount, setQuestionCount] = useState(1);
 
-  const { setCurrentTest } = useStore();
+  const { setCurrentTest, currentTest } = useStore();
 
   const [answers, setAnswers] = useState(Array.from({ length: 20 }, () => ""));
 
@@ -32,9 +35,48 @@ export function TestPage() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } else {
       setCurrentTest({ answers, questions: questionList });
-      alert("Test finished!");
+      handleSubmitTest();
+      navigate(`/home/testresult/${data?.topic?.name}`);
     }
   };
+
+  async function handleSubmitTest() {
+    const right = [];
+    const wrong = [];
+    const withoutAnswer = [];
+
+    for (let i = 0; i < 20; i++) {
+      // Ensure loop runs correctly
+      const userAnswer = currentTest?.answers[i];
+      const currentQuestion = currentTest?.questions[i];
+
+      if (userAnswer === currentQuestion.right) {
+        right.push(currentQuestion);
+      } else if (userAnswer === "") {
+        withoutAnswer.push(currentQuestion);
+      } else {
+        wrong.push(currentQuestion);
+      }
+    }
+    const test = {
+      username: username,
+      topic: data?.topic?.name,
+      numberofquestions: 20,
+      result: {
+        right,
+        wrong,
+        withoutAnswer,
+      },
+    };
+    try {
+      await httpRequest.post(TESTS_URL, test);
+      await httpRequest.patch(`${TOPICS_URL}/${data?.topic?.id}`, {
+        participants: data?.topic?.participants,
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  }
 
   const handlePreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
@@ -120,7 +162,7 @@ export function TestPage() {
               className={`w-40 py-3 bg-blue-600 text-white rounded-lg shadow-md
                 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50
                 disabled:bg-blue-300 disabled:cursor-not-allowed`}
-              disabled={!currentQuestionIndex > 19}
+              disabled={currentQuestionIndex === 20}
             >
               {currentQuestionIndex < data?.questions?.length - 1
                 ? "Next"

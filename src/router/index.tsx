@@ -11,6 +11,10 @@ import { ResultsPage } from "../pages/results/ResultsPage";
 import { HomePage } from "../pages/home/HomePage";
 import { TestsListPage } from "../pages/testsList/TestsListPage";
 import { testLoader, TestPage } from "../pages/test/TestPage";
+import {
+  resultLoader,
+  TestResultPage,
+} from "../pages/testResult/TestResultPage";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +60,11 @@ const router = createBrowserRouter([
         path: "/home/tests/:test",
         element: <TestPage />,
         loader: testLoader,
+      },
+      {
+        path: "/home/testresult/:test",
+        element: <TestResultPage />,
+        loader: resultLoader,
       },
     ],
   },

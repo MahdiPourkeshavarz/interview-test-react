@@ -6,9 +6,12 @@ export function Header() {
   const navigate = useNavigate();
 
   const token = localStorage.getItem("accessToken");
+  const username = localStorage.getItem("username");
 
   function handleLogout() {
     clearStore();
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("username");
     navigate("/");
   }
 
@@ -41,12 +44,25 @@ export function Header() {
             Home
           </NavLink>
 
+          {username && (
+            <NavLink
+              to={`/home/profile/${username}`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-500 font-semibold border-b-2 border-blue-500 pb-1"
+                  : "text-black hover:text-blue-500"
+              }
+            >
+              My Test History
+            </NavLink>
+          )}
+
           <NavLink
             to={"/admin"}
             className={({ isActive }) =>
               isActive
-                ? "text-blue-500 font-semibold border-b-2 border-blue-500 pb-1"
-                : "text-black hover:text-blue-500"
+                ? "text-blue-500 font-semibold border-b-2 border-blue-500 pb-1 pl-6"
+                : "text-black hover:text-blue-500 pl-6"
             }
           >
             Admin Panel

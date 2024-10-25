@@ -13,7 +13,7 @@ export function TestCard({ test }: props) {
       to={`/home/tests/${test.name}`}
       className="relative w-full bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
     >
-      {test?.participants && (
+      {Number(test?.participants) > 0 && (
         <div className="absolute top-[218px] right-4 flex space-x-2 items-center text-white bg-slate-100/10 px-1 py-1 rounded-xl shadow-md">
           <p>Participants:</p>
           <div className="flex space-x-1 items-center">
