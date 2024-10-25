@@ -1,8 +1,8 @@
 export interface topicData {
   name: string;
-  quantity: number;
   timeUnit: number;
-  imgSrc: string;
+  imgSrc?: string;
+  participants?: string;
 }
 
 export interface userData {
@@ -17,10 +17,7 @@ export interface questionData {
   topic: string;
   title: string;
   right: string;
-  a: string;
-  b: string;
-  c: string;
-  d: string;
+  options: string[];
   id?: number;
 }
 
@@ -45,4 +42,11 @@ export interface StoreState {
   clearStore: () => void;
   username: string;
   setUsername: (name: string) => void;
+  currentTest: TestData | null;
+  setCurrentTest: (testData: TestData | null) => void;
+}
+
+interface TestData {
+  answers: string[];
+  questions?: questionData[];
 }

@@ -126,7 +126,7 @@ export function QuestionsPage() {
             value={selectedTopic === "" ? "Topics" : selectedTopic}
           >
             <option value="">Topics</option>
-            {topicsList?.topics.map((topic: topicData) => (
+            {topicsList?.topics?.map((topic: topicData) => (
               <option value={topic.name} key={topic.timeUnit}>
                 {topic.name}
               </option>

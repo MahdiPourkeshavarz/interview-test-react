@@ -96,8 +96,8 @@ export function TestsListPage() {
 
   return (
     <>
-      <div className="myContainer flex flex-col px-4 py-8">
-        <div className="mt-8 grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
+      <div className="flex flex-col px-4 py-8">
+        <div className="myContainer grid grid-cols-1 gap-8 px-4 py-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {isTopicsLoading ? (
             <p>Loading...</p>
           ) : (
@@ -109,7 +109,8 @@ export function TestsListPage() {
 
         <div className="mt-4 flex justify-center">
           {topicsList &&
-            generatePaginationButtons(topicsList?.totalPages as number)}
+            topicsList.totalPages > 1 &&
+            generatePaginationButtons(topicsList.totalPages as number)}
         </div>
       </div>
     </>

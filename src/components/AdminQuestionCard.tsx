@@ -17,6 +17,8 @@ export function AdminQuestionCard({ question, refetch }: props) {
   const [questionToEdit, setQuestionToEdit] = useState<questionData>();
   const [deleteQuestionId, setDeleteQuestionId] = useState<number>();
 
+  const names = ["A.", "B.", "C.", "D."];
+
   function handleEditModalState() {
     setEditModalOpen((prev) => !prev);
     refetch();
@@ -54,43 +56,22 @@ export function AdminQuestionCard({ question, refetch }: props) {
         </h3>
 
         <div className="space-y-3">
-          <p
-            className={`${
-              question.right === question.a
-                ? "text-blue-600 font-bold"
-                : "text-gray-600"
-            } transition-colors duration-300 ease-in-out`}
-          >
-            A. {question.a}
-          </p>
-          <p
-            className={`${
-              question.right === question.b
-                ? "text-blue-600 font-bold"
-                : "text-gray-600"
-            } transition-colors duration-300 ease-in-out`}
-          >
-            B. {question.b}
-          </p>
-          <p
-            className={`${
-              question.right === question.c
-                ? "text-blue-600 font-bold"
-                : "text-gray-600"
-            } transition-colors duration-300 ease-in-out`}
-          >
-            C. {question.c}
-          </p>
-          <p
-            className={`${
-              question.right === question.d
-                ? "text-blue-600 font-bold"
-                : "text-gray-600"
-            } transition-colors duration-300 ease-in-out`}
-          >
-            D. {question.d}
-          </p>
+          {question?.options?.map((option, index) => {
+            return (
+              <p
+                key={option[index]}
+                className={`${
+                  question.right === option[index]
+                    ? "text-blue-600 font-bold"
+                    : "text-gray-600"
+                } transition-colors duration-300 ease-in-out`}
+              >
+                {names[index]} {option[index]}
+              </p>
+            );
+          })}
         </div>
+
         <div className="absolute bottom-2 right-4 flex items-center space-x-4">
           <button
             className="text-blue-600 transition-all hover:text-blue-500"

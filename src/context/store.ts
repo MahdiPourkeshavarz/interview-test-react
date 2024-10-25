@@ -41,6 +41,8 @@ export const useStore = create<StoreState>(
           return {
             activeNav: "",
             theme: "light",
+            username: "",
+            currentTest: null,
           };
         }),
 
@@ -49,6 +51,9 @@ export const useStore = create<StoreState>(
         set(() => ({
           username: name,
         })),
+
+      currentTest: null,
+      setCurrentTest: (testData) => set(() => ({ currentTest: testData })),
     }),
     {
       name: "app-store",

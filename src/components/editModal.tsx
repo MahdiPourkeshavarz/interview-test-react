@@ -38,35 +38,35 @@ export function EditModal({ open, handleState, question }: Props) {
     value: correctAnswerValue,
     isValid: isCorrectAnswerValid,
     setValue: setCorrectAnswerValue,
-  } = useFieldValidation("", "english");
+  } = useFieldValidation("", "");
 
   const {
     value: AValue,
     isValid: isAValid,
     setValue: setAValue,
-  } = useFieldValidation("", "english");
+  } = useFieldValidation("", "");
 
   const {
     value: BValue,
     isValid: isBValid,
     setValue: setBValue,
-  } = useFieldValidation("", "english");
+  } = useFieldValidation("", "");
 
   const {
     value: CValue,
     isValid: isCValid,
     setValue: setCValue,
-  } = useFieldValidation("", "english");
+  } = useFieldValidation("", "");
 
   const {
     value: DValue,
     isValid: isDValid,
     setValue: setDValue,
-  } = useFieldValidation("", "english");
+  } = useFieldValidation("", "");
 
   const { data: topicsList, refetch } = useQuery({
     queryKey: ["list"],
-    queryFn: () => getTopics(),
+    queryFn: () => getTopics(""),
   });
 
   useEffect(() => {
@@ -74,10 +74,10 @@ export function EditModal({ open, handleState, question }: Props) {
       setSelectedCategory(question.topic);
       setTitleValue(question.title);
       setCorrectAnswerValue(question.right);
-      setAValue(question.a);
-      setBValue(question.b);
-      setCValue(question.c);
-      setDValue(question.d);
+      setAValue(question.options[0]);
+      setBValue(question.options[1]);
+      setCValue(question.options[2]);
+      setDValue(question.options[3]);
     }
   }, [question]);
 
@@ -106,10 +106,7 @@ export function EditModal({ open, handleState, question }: Props) {
               topic: selectedCategory,
               title: titleValue,
               right: correctAnswerValue,
-              a: AValue,
-              b: BValue,
-              c: CValue,
-              d: DValue,
+              options: [AValue, BValue, CValue, DValue],
             });
             setTitleValue("");
             setSelectedCategory("");
@@ -133,7 +130,7 @@ export function EditModal({ open, handleState, question }: Props) {
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-              {topicsList?.map((category: topicData) => (
+              {topicsList?.topics?.map((category: topicData) => (
                 <MenuItem key={category?.timeUnit} value={category?.name}>
                   {category?.name}
                 </MenuItem>

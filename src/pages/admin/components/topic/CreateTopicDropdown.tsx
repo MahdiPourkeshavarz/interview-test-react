@@ -18,19 +18,13 @@ export function CreateTopic() {
   } = useFieldValidation("", "");
 
   const {
-    value: quantityValue,
-    isValid: isQuantityValid,
-    setValue: setQuantityValue,
-  } = useFieldValidation("", "number");
-
-  const {
     value: timeValue,
     isValid: isTimeValid,
     setValue: setTimeValue,
   } = useFieldValidation("", "number");
 
   async function handleAddCategory() {
-    if (!isValid || !isQuantityValid || !isTimeValid) {
+    if (!isValid || !isTimeValid) {
       toast.error("Invalid topic. try again!", {
         position: "bottom-center",
       });
@@ -39,12 +33,10 @@ export function CreateTopic() {
     try {
       await httpRequest.post(TOPICS_URL, {
         name: topicNameValue,
-        quantity: quantityValue,
         timeUnit: timeValue,
         imgSrc: topicSrcValue,
       });
       setTopicValue("");
-      setQuantityValue("");
       setTimeValue("");
       toast.success("Topic Added successfully", {
         position: "bottom-center",
@@ -74,16 +66,7 @@ export function CreateTopic() {
         }}
         error={topicSrcValue === "" ? false : !isSrcValid}
       />
-      <div className="grid grid-cols-2 px-4">
-        <TextField
-          label="How many question for test(number)?"
-          variant="outlined"
-          value={quantityValue}
-          onChange={(e) => {
-            setQuantityValue(e.target.value);
-          }}
-          error={quantityValue === "" ? false : !isQuantityValid}
-        />
+      <div className="grid grid-cols-2">
         <TextField
           label="Each question answer time(seconds)?"
           variant="outlined"
