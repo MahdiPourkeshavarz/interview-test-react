@@ -8,6 +8,14 @@ import { AdminPage } from "../pages/admin/AdminPage";
 import { Toaster } from "react-hot-toast";
 import { QuestionsPage } from "../pages/questions/QuestionsPage";
 import { ResultsPage } from "../pages/results/ResultsPage";
+import { HomePage } from "../pages/home/HomePage";
+import { TestsListPage } from "../pages/testsList/TestsListPage";
+import { testLoader, TestPage } from "../pages/test/TestPage";
+import {
+  resultLoader,
+  TestResultPage,
+} from "../pages/testResult/TestResultPage";
+import { profileLoader, ProfilePage } from "../pages/profile/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +48,29 @@ const router = createBrowserRouter([
             element: <ResultsPage />,
           },
         ],
+      },
+      {
+        path: "/home",
+        element: <HomePage />,
+      },
+      {
+        path: "/home/tests",
+        element: <TestsListPage />,
+      },
+      {
+        path: "/home/tests/:test",
+        element: <TestPage />,
+        loader: testLoader,
+      },
+      {
+        path: "/home/testresult/:test",
+        element: <TestResultPage />,
+        loader: resultLoader,
+      },
+      {
+        path: "/home/profile/:username",
+        element: <ProfilePage />,
+        loader: profileLoader,
       },
     ],
   },

@@ -56,8 +56,8 @@ export function CreateQuestion() {
   } = useFieldValidation("", "");
 
   const { data: topicsList, refetch } = useQuery({
-    queryKey: ["list"],
-    queryFn: () => getTopics(),
+    queryKey: ["topic"],
+    queryFn: () => getTopics(""),
   });
   const handleAddQuestion = async () => {
     if (
@@ -78,10 +78,7 @@ export function CreateQuestion() {
         topic: selectedCategory,
         title: titleValue,
         right: correctAnswerValue,
-        a: AValue,
-        b: BValue,
-        c: CValue,
-        d: DValue,
+        options: [AValue, BValue, CValue, DValue],
       });
       setTitleValue("");
       setSelectedCategory("");
@@ -108,7 +105,7 @@ export function CreateQuestion() {
           onChange={(e) => setSelectedCategory(e.target.value)}
           required
         >
-          {topicsList?.map((category: topicData) => (
+          {topicsList?.topics?.map((category: topicData) => (
             <MenuItem key={category?.timeUnit} value={category?.name}>
               {category?.name}
             </MenuItem>

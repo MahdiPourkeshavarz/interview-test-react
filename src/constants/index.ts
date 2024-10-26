@@ -1,6 +1,6 @@
 export const BASE_URL = "http://localhost:3000";
 
-export const USER_URL = BASE_URL + "/users";
+export const USER_URL = BASE_URL;
 
 export const TESTS_URL = BASE_URL + "/tests";
 

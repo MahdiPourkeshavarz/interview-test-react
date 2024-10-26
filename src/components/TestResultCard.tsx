@@ -9,11 +9,11 @@ interface props {
 export function TestResultCard({ resultData }: props) {
   const [expanded, setExpanded] = useState(false);
 
-  const { username, topic, numberofquestions, result } = resultData;
+  const { username, topic, result } = resultData;
   const correctAnswers = result?.right?.length || 0;
   const wrongAnswers = result?.wrong?.length || 0;
   const unanswered = result?.withoutAnswer?.length || 0;
-  const totalQuestions = parseInt(numberofquestions, 10);
+  const totalQuestions = 20;
   const passThreshold = Math.ceil(totalQuestions * 0.7);
   const hasPassed = correctAnswers >= passThreshold;
 
@@ -65,10 +65,10 @@ export function TestResultCard({ resultData }: props) {
                   <p className="font-medium text-gray-900">{question.title}</p>
                   <p className="text-green-500">Correct: {question.right}</p>
                   <div className="mt-1 text-sm text-gray-600">
-                    <p>A: {question.a}</p>
-                    <p>B: {question.b}</p>
-                    <p>C: {question.c}</p>
-                    <p>D: {question.d}</p>
+                    <p>A: {question.options[0]}</p>
+                    <p>B: {question.options[1]}</p>
+                    <p>C: {question.options[2]}</p>
+                    <p>D: {question.options[3]}</p>
                   </div>
                 </div>
               ))}
@@ -82,10 +82,10 @@ export function TestResultCard({ resultData }: props) {
                   <p className="font-medium text-gray-900">{question.title}</p>
                   <p className="text-red-500">Correct: {question.right}</p>
                   <div className="mt-1 text-sm text-gray-600">
-                    <p>A: {question.a}</p>
-                    <p>B: {question.b}</p>
-                    <p>C: {question.c}</p>
-                    <p>D: {question.d}</p>
+                    <p>A: {question.options[0]}</p>
+                    <p>B: {question.options[1]}</p>
+                    <p>C: {question.options[2]}</p>
+                    <p>D: {question.options[3]}</p>
                   </div>
                 </div>
               ))}
@@ -99,10 +99,10 @@ export function TestResultCard({ resultData }: props) {
                   <p className="font-medium text-gray-900">{question.title}</p>
                   <p className="text-yellow-500">Correct: {question.right}</p>
                   <div className="mt-1 text-sm text-gray-600">
-                    <p>A: {question.a}</p>
-                    <p>B: {question.b}</p>
-                    <p>C: {question.c}</p>
-                    <p>D: {question.d}</p>
+                    <p>A: {question.options[0]}</p>
+                    <p>B: {question.options[1]}</p>
+                    <p>C: {question.options[2]}</p>
+                    <p>D: {question.options[3]}</p>
                   </div>
                 </div>
               ))}
