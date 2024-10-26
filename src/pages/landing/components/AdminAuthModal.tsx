@@ -28,6 +28,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm({
     resolver: yupResolver(loginSchema),
   });
@@ -42,11 +43,17 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
           position: "bottom-center",
         });
         navigate("/admin");
+      } else {
+        toast.error("Login Unsuccessful! try again", {
+          position: "bottom-center",
+        });
+        reset();
       }
     } catch (e) {
-      toast.error("با خطا مواجه شدید", {
+      toast.error("Login Unsuccessful! try again", {
         position: "bottom-center",
       });
+      reset();
       console.error("Error during authentication:", e);
     } finally {
       setIsLoading(false);
