@@ -15,6 +15,7 @@ import {
   resultLoader,
   TestResultPage,
 } from "../pages/testResult/TestResultPage";
+import { profileLoader, ProfilePage } from "../pages/profile/ProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
         path: "/home/testresult/:test",
         element: <TestResultPage />,
         loader: resultLoader,
+      },
+      {
+        path: "/home/profile/:username",
+        element: <ProfilePage />,
+        loader: profileLoader,
       },
     ],
   },

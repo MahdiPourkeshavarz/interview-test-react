@@ -1,8 +1,10 @@
 import { TextField, Button } from "@mui/material";
-import { httpRequest } from "../../../../lib/axiosConfig";
 import { useFieldValidation } from "../../../../hooks/useFieldValidation";
 import toast from "react-hot-toast";
-import { TOPICS_URL } from "../../../../constants";
+import { useMutation } from "@tanstack/react-query";
+import { topicData } from "../../../../types";
+import { createTopic } from "../../../../api/createTopic";
+import { queryClient } from "../../../../lib/reactQueryConfig";
 
 export function CreateTopic() {
   const {
@@ -23,6 +25,20 @@ export function CreateTopic() {
     setValue: setTimeValue,
   } = useFieldValidation("", "number");
 
+  const createTopicMutation = useMutation({
+    mutationKey: ["topic"],
+    mutationFn: (topic: topicData) => createTopic(topic),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["topic"] });
+      setTopicValue("");
+      setTimeValue("");
+      setTopicSrcValue("");
+      toast.success("Topic Added successfully", {
+        position: "bottom-center",
+      });
+    },
+  });
+
   async function handleAddCategory() {
     if (!isValid || !isTimeValid) {
       toast.error("Invalid topic. try again!", {
@@ -31,16 +47,12 @@ export function CreateTopic() {
       return;
     }
     try {
-      await httpRequest.post(TOPICS_URL, {
+      const topic = {
         name: topicNameValue,
         timeUnit: timeValue,
         imgSrc: topicSrcValue,
-      });
-      setTopicValue("");
-      setTimeValue("");
-      toast.success("Topic Added successfully", {
-        position: "bottom-center",
-      });
+      };
+      createTopicMutation.mutate(topic);
     } catch (error) {
       console.error("Error adding topic:", error);
     }

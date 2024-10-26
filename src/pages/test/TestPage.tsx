@@ -33,10 +33,22 @@ export function TestPage() {
     if (currentQuestionIndex < data?.questions?.length - 1) {
       setQuestionCount((prev) => prev + 1);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-    } else {
       setCurrentTest({ answers, questions: questionList });
+    } else {
+      console.log(currentTest?.questions);
       handleSubmitTest();
-      navigate(`/home/testresult/${data?.topic?.name}`);
+      setTimeout(() => {
+        navigate(`/home/testresult/${data?.topic?.name}`);
+      }, 700);
+    }
+  };
+
+  const handlePreviousQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setQuestionCount((prev) => prev - 1);
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setCurrentTest({ answers, questions: questionList });
+      console.log(currentTest?.questions);
     }
   };
 
@@ -46,7 +58,6 @@ export function TestPage() {
     const withoutAnswer = [];
 
     for (let i = 0; i < 20; i++) {
-      // Ensure loop runs correctly
       const userAnswer = currentTest?.answers[i];
       const currentQuestion = currentTest?.questions[i];
 
@@ -58,6 +69,7 @@ export function TestPage() {
         wrong.push(currentQuestion);
       }
     }
+
     const test = {
       username: username,
       topic: data?.topic?.name,
@@ -68,22 +80,16 @@ export function TestPage() {
         withoutAnswer,
       },
     };
+
     try {
       await httpRequest.post(TESTS_URL, test);
       await httpRequest.patch(`${TOPICS_URL}/${data?.topic?.id}`, {
-        participants: data?.topic?.participants,
+        participants: Number(data?.topic?.participants) + 1,
       });
     } catch (e) {
       console.log(e);
     }
   }
-
-  const handlePreviousQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setQuestionCount((prev) => prev - 1);
-      setCurrentQuestionIndex(currentQuestionIndex - 1);
-    }
-  };
 
   function handleSelectedOption(option: string) {
     setAnswers((prevAnswers) => {

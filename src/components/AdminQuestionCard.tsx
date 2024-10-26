@@ -59,14 +59,14 @@ export function AdminQuestionCard({ question, refetch }: props) {
           {question?.options?.map((option, index) => {
             return (
               <p
-                key={option[index]}
+                key={index} // Use index as the key to avoid errors in rendering
                 className={`${
-                  question.right === option[index]
+                  question.right === option
                     ? "text-blue-600 font-bold"
                     : "text-gray-600"
                 } transition-colors duration-300 ease-in-out`}
               >
-                {names[index]} {option[index]}
+                {names[index]} {option}
               </p>
             );
           })}

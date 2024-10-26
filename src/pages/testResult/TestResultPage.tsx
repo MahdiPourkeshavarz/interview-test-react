@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useStore } from "../../context/store";
 
 export function TestResultPage() {
   const { currentTest, clearStore } = useStore();
   const username = localStorage.getItem("username");
+  const navigate = useNavigate();
   if (!currentTest) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
@@ -33,6 +34,7 @@ export function TestResultPage() {
 
   function handleClearTest() {
     clearStore();
+    navigate("/home");
   }
 
   return (
@@ -107,13 +109,12 @@ export function TestResultPage() {
         </div>
 
         <div className="flex justify-center mt-8">
-          <Link
-            to={"/home"}
+          <button
             onClick={handleClearTest}
             className="py-2 px-4 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 focus:outline-none"
           >
             Go to home
-          </Link>
+          </button>
         </div>
       </div>
     </div>

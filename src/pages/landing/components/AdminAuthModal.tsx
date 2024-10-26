@@ -38,7 +38,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
     try {
       const isLoginSuccessful = await submitUser(data, "login");
       if (isLoginSuccessful) {
-        toast.error("Login successful", {
+        toast.success("Login successful", {
           position: "bottom-center",
         });
         navigate("/admin");

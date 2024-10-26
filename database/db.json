@@ -633,6 +633,260 @@
         ]
       },
       "id": 7
+    },
+    {
+      "username": "meitipk",
+      "topic": "react",
+      "numberofquestions": 20,
+      "result": {
+        "right": [
+          {
+            "id": 80,
+            "topic": "react",
+            "title": "What is a controlled component in React?",
+            "right": "A component that is controlled by React state",
+            "options": [
+              "A component that has its own state",
+              "A component that is controlled by React state",
+              "A component that controls other components",
+              "A component that manages its own events"
+            ]
+          },
+          {
+            "id": 19,
+            "title": "How to update state correctly in a React functional component?",
+            "topic": "react",
+            "right": "Using the setState function from useState hook",
+            "options": [
+              "Directly modifying the state variable",
+              "Using the setState function from useState hook",
+              "Using a lifecycle method",
+              "Using a callback function"
+            ]
+          },
+          {
+            "id": 18,
+            "title": "What is the difference between functional and class components?",
+            "topic": "react",
+            "right": "Functional components are simpler and use hooks, class components use lifecycle methods",
+            "options": [
+              "Functional components are faster, class components are slower",
+              "Functional components use state, class components don't",
+              "Functional components are legacy, class components are modern",
+              "Functional components are simpler and use hooks, class components use lifecycle methods"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "id": 17,
+            "title": "What is the purpose of `React.StrictMode`?",
+            "topic": "react",
+            "right": "To highlight potential problems in your application",
+            "options": [
+              "To improve performance",
+              "To highlight potential problems in your application",
+              "To enable server-side rendering",
+              "To manage component state"
+            ]
+          },
+          {
+            "id": 4,
+            "title": "What does `useEffect` hook do?",
+            "topic": "react",
+            "right": "Performs side effects in functional components",
+            "options": [
+              "Updates the components state",
+              "Performs side effects in functional components",
+              "Renders the component",
+              "Handles component events"
+            ]
+          },
+          {
+            "id": 62,
+            "topic": "react",
+            "title": "What is React Router used for?",
+            "right": "To handle routing in React applications",
+            "options": [
+              "To manage state",
+              "To handle routing in React applications",
+              "To style components",
+              "To manage events"
+            ]
+          },
+          {
+            "id": 14,
+            "title": "What is reconciliation in React?",
+            "topic": "react",
+            "right": "The process of updating the actual DOM efficiently",
+            "options": [
+              "The process of rendering components",
+              "The process of updating the actual DOM efficiently",
+              "The process of handling events",
+              "The process of creating components"
+            ]
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 15,
+            "title": "How do you prevent default behavior of an event?",
+            "topic": "react",
+            "right": "Using `event.preventDefault()`",
+            "options": [
+              "Using `event.stopPropagation()`",
+              "Using `event.preventDefault()`",
+              "Using `event.stopImmediatePropagation()`",
+              "Using `event.cancel()`"
+            ]
+          },
+          {
+            "id": 71,
+            "topic": "react",
+            "title": "What does `useReducer` hook do?",
+            "right": "Manages complex state logic in functional components",
+            "options": [
+              "Handles component styling",
+              "Manages complex state logic in functional components",
+              "Handles side effects",
+              "Manages event listeners"
+            ]
+          },
+          {
+            "id": 86,
+            "topic": "react",
+            "title": "What is the purpose of `useContext` in React?",
+            "right": "To access context values without wrapping components with Context.Consumer",
+            "options": [
+              "To create new context",
+              "To access context values without wrapping components with Context.Consumer",
+              "To manage component state",
+              "To handle side effects"
+            ]
+          },
+          {
+            "id": 83,
+            "topic": "react",
+            "title": "What is Redux used for in React?",
+            "right": "To manage global state",
+            "options": [
+              "To manage component lifecycle",
+              "To style components",
+              "To handle routing",
+              "To manage global state"
+            ]
+          },
+          {
+            "id": 104,
+            "topic": "react",
+            "title": "What is the purpose of `useEffect`?",
+            "right": "To perform side effects in function components",
+            "options": [
+              "To manage component state",
+              "To perform side effects in function components",
+              "To handle events",
+              "To define component styles"
+            ]
+          },
+          {
+            "id": 98,
+            "topic": "react",
+            "title": "How can you optimize performance in a React app?",
+            "right": "Using memoization and React.PureComponent",
+            "options": [
+              "By increasing the component size",
+              "Using memoization and React.PureComponent",
+              "By rendering everything at once",
+              "Avoiding use of hooks"
+            ]
+          },
+          {
+            "id": 92,
+            "topic": "react",
+            "title": "What is the purpose of `useCallback` in React?",
+            "right": "To memoize functions and optimize performance",
+            "options": [
+              "To manage component lifecycle",
+              "To memoize functions and optimize performance",
+              "To handle events",
+              "To control component rendering"
+            ]
+          },
+          {
+            "id": 11,
+            "title": "What is a higher-order component (HOC)?",
+            "topic": "react",
+            "right": "A function that takes a component and returns a new enhanced component",
+            "options": [
+              "A component with multiple child components",
+              "A function that takes a component and returns a new enhanced component",
+              "A component that uses context API",
+              "A component that uses hooks"
+            ]
+          },
+          {
+            "id": 65,
+            "topic": "react",
+            "title": "What is a higher-order component in React?",
+            "right": "A function that takes a component and returns a new component",
+            "options": [
+              "A component that manages state",
+              "A function that takes a component and returns a new component",
+              "A component that handles events",
+              "A function that updates the DOM"
+            ]
+          },
+          {
+            "id": 8,
+            "title": "What is the role of keys in React lists?",
+            "topic": "react",
+            "right": "To help React identify which items have changed, added, or removed",
+            "options": [
+              "To style list items",
+              "To help React identify which items have changed, added, or removed",
+              "To add event listeners to list items",
+              "To store data associated with list items"
+            ]
+          },
+          {
+            "id": 10,
+            "title": "What is React Context API used for?",
+            "topic": "react",
+            "right": "To pass data through the component tree without prop drilling",
+            "options": [
+              "To manage component state",
+              "To pass data through the component tree without prop drilling",
+              "To handle component events",
+              "To define component styles"
+            ]
+          },
+          {
+            "id": 95,
+            "topic": "react",
+            "title": "What is JSX?",
+            "right": "A syntax extension for JavaScript used in React",
+            "options": [
+              "A server-side framework",
+              "A syntax extension for JavaScript used in React",
+              "A CSS preprocessor",
+              "A build tool"
+            ]
+          },
+          {
+            "id": 9,
+            "title": "How do you pass data down to child components?",
+            "topic": "react",
+            "right": "Through props",
+            "options": [
+              "Through state",
+              "Through props",
+              "Through context",
+              "Through refs"
+            ]
+          }
+        ]
+      },
+      "id": 8
     }
   ],
   "topics": [
@@ -641,7 +895,7 @@
       "name": "react",
       "imgSrc": "https://jslib.dev/wp-content/uploads/2022/03/Reactlogo.jpg",
       "timeUnit": "60",
-      "participants": "2"
+      "participants": 4
     },
     {
       "id": 2,
@@ -656,6 +910,12 @@
       "timeUnit": "70",
       "participants": "0",
       "id": 3
+    },
+    {
+      "name": "go",
+      "timeUnit": "50",
+      "imgSrc": "https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/golang.png",
+      "id": 4
     }
   ],
   "questions": [
@@ -1943,6 +2203,618 @@
         "To style the component",
         "To manage event listeners"
       ]
+    },
+    {
+      "id": 111,
+      "title": "What is the purpose of Go's `goroutine`?",
+      "topic": "go",
+      "right": "To run a function concurrently in a lightweight thread",
+      "options": [
+        "To manage memory allocation",
+        "To compile Go programs into machine code",
+        "To run a function concurrently in a lightweight thread",
+        "To handle network requests"
+      ]
+    },
+    {
+      "id": 112,
+      "title": "What is the role of Go's `channel`?",
+      "topic": "go",
+      "right": "To enable communication and synchronization between goroutines",
+      "options": [
+        "To manage file I/O",
+        "To enable communication and synchronization between goroutines",
+        "To define data structures",
+        "To handle error conditions"
+      ]
+    },
+    {
+      "id": 113,
+      "title": "How do you start a goroutine in Go?",
+      "topic": "go",
+      "right": "Using the `go` keyword before a function call",
+      "options": [
+        "Using the `thread` keyword",
+        "Using the `async` keyword",
+        "Using the `go` keyword before a function call",
+        "Using the `concurrent` keyword"
+      ]
+    },
+    {
+      "id": 114,
+      "title": "What is a `select` statement used for in Go?",
+      "topic": "go",
+      "right": "To handle multiple channel operations concurrently",
+      "options": [
+        "To define loops",
+        "To handle multiple channel operations concurrently",
+        "To perform conditional branching",
+        "To manage goroutine lifecycles"
+      ]
+    },
+    {
+      "id": 115,
+      "title": "What is the purpose of Go's `defer` statement?",
+      "topic": "go",
+      "right": "To schedule a function call to be executed after the surrounding function returns",
+      "options": [
+        "To define variables",
+        "To schedule a function call to be executed after the surrounding function returns",
+        "To handle exceptions",
+        "To create anonymous functions"
+      ]
+    },
+    {
+      "id": 116,
+      "title": "What is Go's approach to error handling?",
+      "topic": "go",
+      "right": "Explicit error returns from functions",
+      "options": [
+        "Exceptions",
+        "Explicit error returns from functions",
+        "Try-catch blocks",
+        "Automatic error detection"
+      ]
+    },
+    {
+      "id": 117,
+      "title": "What is the difference between `==` and `===` in Go?",
+      "topic": "go",
+      "right": "Go doesn't have a `===` operator; `==` compares values",
+      "options": [
+        " `==` compares values, `===` compares types",
+        " `==` compares types, `===` compares values",
+        "Go doesn't have a `===` operator; `==` compares values",
+        "They are both the same"
+      ]
+    },
+    {
+      "id": 118,
+      "title": "What is the purpose of Go's `interface{}`?",
+      "topic": "go",
+      "right": "It's an empty interface that can hold values of any type",
+      "options": [
+        "It's a specific data type",
+        "It's an empty interface that can hold values of any type",
+        "It's used for error handling",
+        "It's used for concurrency control"
+      ]
+    },
+    {
+      "id": 119,
+      "title": "What is Go's built-in garbage collector responsible for?",
+      "topic": "go",
+      "right": "Automatic memory management",
+      "options": [
+        "File I/O",
+        "Network communication",
+        "Automatic memory management",
+        "Concurrency control"
+      ]
+    },
+    {
+      "id": 120,
+      "title": "What is a Go module?",
+      "topic": "go",
+      "right": "A way to manage dependencies in Go projects",
+      "options": [
+        "A type of data structure",
+        "A way to manage dependencies in Go projects",
+        "A type of function",
+        "A way to handle errors"
+      ]
+    },
+    {
+      "id": 121,
+      "title": "How do you define a struct in Go?",
+      "topic": "go",
+      "right": "Using the `struct` keyword",
+      "options": [
+        "Using the `class` keyword",
+        "Using the `object` keyword",
+        "Using the `struct` keyword",
+        "Using the `record` keyword"
+      ]
+    },
+    {
+      "id": 122,
+      "title": "What is the purpose of Go's `make` function?",
+      "topic": "go",
+      "right": "To allocate memory for slices, maps, and channels",
+      "options": [
+        "To create functions",
+        "To create structs",
+        "To allocate memory for slices, maps, and channels",
+        "To define constants"
+      ]
+    },
+    {
+      "id": 123,
+      "title": "What is the role of Go's `context` package?",
+      "topic": "go",
+      "right": "To manage deadlines and cancellation signals for goroutines",
+      "options": [
+        "To manage file I/O",
+        "To manage deadlines and cancellation signals for goroutines",
+        "To handle network requests",
+        "To define data types"
+      ]
+    },
+    {
+      "id": 124,
+      "title": "What is the purpose of Go's `sync` package?",
+      "topic": "go",
+      "right": "To provide synchronization primitives for concurrent programming",
+      "options": [
+        "To handle network communication",
+        "To provide synchronization primitives for concurrent programming",
+        "To manage memory allocation",
+        "To define data structures"
+      ]
+    },
+    {
+      "id": 125,
+      "title": "What is a Go's `mutex` used for?",
+      "topic": "go",
+      "right": "To protect shared resources from race conditions",
+      "options": [
+        "To manage memory",
+        "To handle network requests",
+        "To protect shared resources from race conditions",
+        "To define data types"
+      ]
+    },
+    {
+      "id": 126,
+      "title": "What is the `iota` keyword used for in Go?",
+      "topic": "go",
+      "right": "To generate sequential constants",
+      "options": [
+        "To define variables",
+        "To generate sequential constants",
+        "To create functions",
+        "To handle errors"
+      ]
+    },
+    {
+      "id": 127,
+      "title": "How do you handle multiple return values in Go?",
+      "topic": "go",
+      "right": "By listing multiple return types in the function signature",
+      "options": [
+        "Using exceptions",
+        "By listing multiple return types in the function signature",
+        "Using try-catch blocks",
+        "Using a single return value with a struct"
+      ]
+    },
+    {
+      "id": 128,
+      "title": "What is the purpose of Go's `reflect` package?",
+      "topic": "go",
+      "right": "To allow manipulation of Go values at runtime",
+      "options": [
+        "To manage memory",
+        "To allow manipulation of Go values at runtime",
+        "To handle network requests",
+        "To define data structures"
+      ]
+    },
+    {
+      "id": 129,
+      "title": "What is Go's philosophy regarding error handling?",
+      "topic": "go",
+      "right": "Explicit error checking is crucial for robust code",
+      "options": [
+        "Errors are handled automatically",
+        "Errors are ignored",
+        "Explicit error checking is crucial for robust code",
+        "Errors are handled using exceptions"
+      ]
+    },
+    {
+      "id": 130,
+      "title": "What is the purpose of Go's `time` package?",
+      "topic": "go",
+      "right": "To provide time-related functions",
+      "options": [
+        "To manage memory",
+        "To provide time-related functions",
+        "To handle network requests",
+        "To define data structures"
+      ]
+    },
+    {
+      "id": 131,
+      "title": "What is Go's approach to concurrency?",
+      "topic": "go",
+      "right": "Lightweight goroutines and channels for communication",
+      "options": [
+        "Heavyweight threads",
+        "Asynchronous callbacks",
+        "Lightweight goroutines and channels for communication",
+        "Shared memory"
+      ]
+    },
+    {
+      "id": 132,
+      "title": "What is the significance of Go's built-in testing framework?",
+      "topic": "go",
+      "right": "It encourages and simplifies writing unit tests",
+      "options": [
+        "It's optional",
+        "It's only for complex projects",
+        "It encourages and simplifies writing unit tests",
+        "It's used only for integration testing"
+      ]
+    },
+    {
+      "id": 133,
+      "title": "What is the role of Go's `sync.WaitGroup`?",
+      "topic": "go",
+      "right": "To wait for a collection of goroutines to finish",
+      "options": [
+        "To manage memory",
+        "To wait for a collection of goroutines to finish",
+        "To handle network requests",
+        "To define data structures"
+      ]
+    },
+    {
+      "id": 134,
+      "title": "What is the benefit of Go's static typing?",
+      "topic": "go",
+      "right": "Improved code reliability and early error detection",
+      "options": [
+        "Increased code flexibility",
+        "Improved code readability",
+        "Improved code reliability and early error detection",
+        "Reduced code complexity"
+      ]
+    },
+    {
+      "id": 135,
+      "title": "How does Go handle memory allocation?",
+      "topic": "go",
+      "right": "Through a garbage collector, automatically reclaiming unused memory",
+      "options": [
+        "Manually by the programmer",
+        "Through a garbage collector, automatically reclaiming unused memory",
+        "Using reference counting",
+        "It doesn't handle memory allocation"
+      ]
+    },
+    {
+      "id": 136,
+      "title": "Explain the concept of interfaces in Go.",
+      "topic": "go",
+      "right": "Interfaces define a set of methods that types can implement.",
+      "options": [
+        "Interfaces are similar to classes.",
+        "Interfaces define a set of methods that types can implement.",
+        "Interfaces are used for error handling.",
+        "Interfaces are only used for concurrency."
+      ]
+    },
+    {
+      "id": 137,
+      "title": "What is the purpose of Go's `net/http` package?",
+      "topic": "go",
+      "right": "To handle HTTP requests and responses.",
+      "options": [
+        "To manage file I/O",
+        "To handle HTTP requests and responses.",
+        "To manage concurrency",
+        "To define data structures"
+      ]
+    },
+    {
+      "id": 138,
+      "title": "How do you create a new goroutine that waits for a specific event?",
+      "topic": "go",
+      "right": "Using channels and `select` statements.",
+      "options": [
+        "Using timers",
+        "Using channels and `select` statements.",
+        "Using mutexes",
+        "Using `WaitGroup` only"
+      ]
+    },
+    {
+      "id": 139,
+      "title": "What is a race condition in Go?",
+      "topic": "go",
+      "right": "When multiple goroutines access and modify shared data concurrently.",
+      "options": [
+        "A type of error",
+        "When multiple goroutines access and modify shared data concurrently.",
+        "A memory leak",
+        "A deadlock"
+      ]
+    },
+    {
+      "id": 140,
+      "title": "How can you prevent race conditions in Go?",
+      "topic": "go",
+      "right": "Using mutexes or other synchronization mechanisms.",
+      "options": [
+        "By using only one goroutine",
+        "Using mutexes or other synchronization mechanisms.",
+        "By avoiding shared data",
+        "It's not possible to prevent race conditions"
+      ]
+    },
+    {
+      "id": 141,
+      "title": "What is a deadlock in Go?",
+      "topic": "go",
+      "right": "A situation where two or more goroutines are blocked indefinitely, waiting for each other.",
+      "options": [
+        "A type of error",
+        "A situation where two or more goroutines are blocked indefinitely, waiting for each other.",
+        "A memory leak",
+        "A race condition"
+      ]
+    },
+    {
+      "id": 142,
+      "title": "How do you handle signals (like SIGINT) in Go?",
+      "topic": "go",
+      "right": "Using the `os/signal` package.",
+      "options": [
+        "Using exceptions",
+        "Using the `os/signal` package.",
+        "Ignoring them",
+        "Using channels"
+      ]
+    },
+    {
+      "id": 143,
+      "title": "What is a list comprehension in Python?",
+      "topic": "python",
+      "right": "A concise way to create lists.",
+      "options": [
+        "A type of loop",
+        "A concise way to create lists.",
+        "A way to handle exceptions",
+        "A way to define functions"
+      ]
+    },
+    {
+      "id": 144,
+      "title": "Explain the difference between `append()` and `extend()` in Python lists.",
+      "topic": "python",
+      "right": "`append()` adds a single element, `extend()` adds multiple.",
+      "options": [
+        "They are the same.",
+        "`append()` adds a single element, `extend()` adds multiple.",
+        "`append()` adds multiple, `extend()` adds a single.",
+        "They are used for different data types."
+      ]
+    },
+    {
+      "id": 145,
+      "title": "What is a dictionary in Python?",
+      "topic": "python",
+      "right": "A collection of key-value pairs.",
+      "options": [
+        "An ordered list",
+        "A collection of key-value pairs.",
+        "A set of unique elements",
+        "A tuple of elements"
+      ]
+    },
+    {
+      "id": 146,
+      "title": "How do you handle exceptions in Python?",
+      "topic": "python",
+      "right": "Using `try...except` blocks.",
+      "options": [
+        "Using `if...else` statements",
+        "Using `try...except` blocks.",
+        "Ignoring them",
+        "Using `switch` statements"
+      ]
+    },
+    {
+      "id": 147,
+      "title": "What is a lambda function in Python?",
+      "topic": "python",
+      "right": "An anonymous function defined using the `lambda` keyword.",
+      "options": [
+        "A named function",
+        "An anonymous function defined using the `lambda` keyword.",
+        "A type of class",
+        "A way to handle exceptions"
+      ]
+    },
+    {
+      "id": 148,
+      "title": "What is the purpose of Python's `__init__` method?",
+      "topic": "python",
+      "right": "It's the constructor for a class.",
+      "options": [
+        "It's a destructor",
+        "It's the constructor for a class.",
+        "It's a static method",
+        "It's a class method"
+      ]
+    },
+    {
+      "id": 149,
+      "title": "What is JSX in React?",
+      "topic": "react",
+      "right": "A syntax extension that allows HTML-like code in React components.",
+      "options": [
+        "A JavaScript library",
+        "A syntax extension that allows HTML-like code in React components.",
+        "A CSS framework",
+        "A type of event"
+      ]
+    },
+    {
+      "id": 150,
+      "title": "Explain the concept of props in React.",
+      "topic": "react",
+      "right": "Data passed from a parent component to a child component.",
+      "options": [
+        "Data stored in the component's state",
+        "Data passed from a parent component to a child component.",
+        "Data fetched from an API",
+        "Data stored in the component's local storage"
+      ]
+    },
+    {
+      "id": 151,
+      "title": "What is state in React?",
+      "topic": "react",
+      "right": "Data that can change over time and cause a component to re-render.",
+      "options": [
+        "Data passed from a parent component",
+        "Data that can change over time and cause a component to re-render.",
+        "Data stored in the browser's local storage",
+        "Data defined in the component's props"
+      ]
+    },
+    {
+      "id": 152,
+      "title": "How do you handle events in React?",
+      "topic": "react",
+      "right": "Using event handlers within JSX.",
+      "options": [
+        "Using event listeners",
+        "Using event handlers within JSX.",
+        "Using callbacks",
+        "Using promises"
+      ]
+    },
+    {
+      "id": 153,
+      "title": "What are hooks in React?",
+      "topic": "react",
+      "right": "Functions that let you hook into React state and lifecycle features from function components.",
+      "options": [
+        "Classes used for component creation",
+        "Functions that let you hook into React state and lifecycle features from function components.",
+        "Methods for handling events",
+        "Tools for debugging"
+      ]
+    },
+    {
+      "id": 154,
+      "title": "Explain the concept of conditional rendering in React.",
+      "topic": "react",
+      "right": "Rendering different UI elements based on certain conditions.",
+      "options": [
+        "Rendering the same UI elements repeatedly",
+        "Rendering different UI elements based on certain conditions.",
+        "Rendering UI elements only once",
+        "Rendering UI elements asynchronously"
+      ]
+    },
+    {
+      "id": 155,
+      "title": "What is the purpose of `useEffect` hook in React?",
+      "topic": "react",
+      "right": "To perform side effects in functional components.",
+      "options": [
+        "To update the component's state",
+        "To perform side effects in functional components.",
+        "To handle events",
+        "To render UI elements"
+      ]
+    },
+    {
+      "id": 156,
+      "title": "What is a closure in JavaScript?",
+      "topic": "javascript",
+      "right": "A function that has access to variables from its surrounding scope, even after that scope has finished executing.",
+      "options": [
+        "A type of loop",
+        "A function that has access to variables from its surrounding scope, even after that scope has finished executing.",
+        "A way to handle exceptions",
+        "A way to define classes"
+      ]
+    },
+    {
+      "id": 157,
+      "title": "Explain the difference between `let`, `const`, and `var` in JavaScript.",
+      "topic": "javascript",
+      "right": "`let` and `const` are block-scoped, `var` is function-scoped.",
+      "options": [
+        "They are all the same.",
+        "`let` and `const` are block-scoped, `var` is function-scoped.",
+        "`let` is block-scoped, `const` and `var` are function-scoped.",
+        "`let`, `const`, and `var` are all globally scoped."
+      ]
+    },
+    {
+      "id": 158,
+      "title": "What is an asynchronous function in JavaScript?",
+      "topic": "javascript",
+      "right": "A function that can pause execution and resume later, often using promises or async/await.",
+      "options": [
+        "A function that executes immediately",
+        "A function that can pause execution and resume later, often using promises or async/await.",
+        "A function that handles exceptions",
+        "A function that defines a class"
+      ]
+    },
+    {
+      "id": 159,
+      "title": "What is a promise in JavaScript?",
+      "topic": "javascript",
+      "right": "An object representing the eventual completion (or failure) of an asynchronous operation.",
+      "options": [
+        "A type of loop",
+        "An object representing the eventual completion (or failure) of an asynchronous operation.",
+        "A way to define functions",
+        "A way to handle events"
+      ]
+    },
+    {
+      "id": 160,
+      "title": "Explain the concept of prototypal inheritance in JavaScript.",
+      "topic": "javascript",
+      "right": "Objects inherit properties and methods from their prototype object.",
+      "options": [
+        "Objects inherit from classes",
+        "Objects inherit properties and methods from their prototype object.",
+        "Objects inherit from interfaces",
+        "Objects don't inherit"
+      ]
+    },
+    {
+      "topic": "go",
+      "title": "What is the purpose of Go's `sync.RWMutex`?",
+      "right": "To allow multiple readers but only one writer to access a shared resource concurrently.",
+      "options": [
+        "To allow only one reader and one writer concurrently.",
+        "To allow multiple readers but only one writer to access a shared resource concurrently.",
+        "To allow only one writer to access a shared resource.",
+        "To allow only one reader to access a shared resource."
+      ],
+      "id": 161
     }
   ]
 }

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { getTopics } from "../../api/getTopics";
 import { topicData } from "../../types";
 import { TestCard } from "./components/TestCard";
@@ -11,6 +11,8 @@ export function TestsListPage() {
   const [currentPage, setCurrentPage] = useState(
     Number(searchParams.get("_page")) || 1
   );
+
+  const username = localStorage.getItem("username");
 
   const { data: topicsList, isLoading: isTopicsLoading } = useQuery({
     queryKey: ["list"],
@@ -97,21 +99,35 @@ export function TestsListPage() {
   return (
     <>
       <div className="flex flex-col px-4 py-8">
-        <div className="myContainer grid grid-cols-1 gap-8 px-4 py-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {isTopicsLoading ? (
-            <p>Loading...</p>
-          ) : (
-            topicsList?.topics?.map((topic: topicData, idx: number) => (
-              <TestCard key={idx} test={topic} />
-            ))
-          )}
-        </div>
+        {!username ? (
+          <div className="mt-48 flex flex-col mx-auto text-2xl space-y-5 items-center justify-center px-4 py-8 rounded-lg shadow-xl">
+            <p>Please Login or Signup before taking the tests</p>
+            <Link
+              to="/auth"
+              className="inline-block rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white transition hover:bg-blue-700"
+            >
+              Login/Signup
+            </Link>
+          </div>
+        ) : (
+          <>
+            <div className="myContainer grid grid-cols-1 gap-8 px-4 py-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+              {isTopicsLoading ? (
+                <p>Loading...</p>
+              ) : (
+                topicsList?.topics?.map((topic: topicData, idx: number) => (
+                  <TestCard key={idx} test={topic} />
+                ))
+              )}
+            </div>
 
-        <div className="mt-4 flex justify-center">
-          {topicsList &&
-            topicsList.totalPages > 1 &&
-            generatePaginationButtons(topicsList.totalPages as number)}
-        </div>
+            <div className="mt-4 flex justify-center">
+              {topicsList &&
+                topicsList.totalPages > 1 &&
+                generatePaginationButtons(topicsList.totalPages as number)}
+            </div>
+          </>
+        )}
       </div>
     </>
   );

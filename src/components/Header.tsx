@@ -47,11 +47,7 @@ export function Header() {
           {username && (
             <NavLink
               to={`/home/profile/${username}`}
-              className={({ isActive }) =>
-                isActive
-                  ? "text-blue-500 font-semibold border-b-2 border-blue-500 pb-1"
-                  : "text-black hover:text-blue-500"
-              }
+              className="text-black hover:text-blue-500"
             >
               My Test History
             </NavLink>

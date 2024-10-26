@@ -56,7 +56,7 @@ export function CreateQuestion() {
   } = useFieldValidation("", "");
 
   const { data: topicsList, refetch } = useQuery({
-    queryKey: ["list"],
+    queryKey: ["topic"],
     queryFn: () => getTopics(""),
   });
   const handleAddQuestion = async () => {
@@ -78,10 +78,7 @@ export function CreateQuestion() {
         topic: selectedCategory,
         title: titleValue,
         right: correctAnswerValue,
-        a: AValue,
-        b: BValue,
-        c: CValue,
-        d: DValue,
+        options: [AValue, BValue, CValue, DValue],
       });
       setTitleValue("");
       setSelectedCategory("");

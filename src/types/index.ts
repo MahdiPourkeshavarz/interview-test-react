@@ -1,6 +1,6 @@
 export interface topicData {
   name: string;
-  timeUnit: number;
+  timeUnit: string;
   imgSrc?: string;
   participants?: string;
 }
