@@ -19,9 +19,12 @@ export function Header() {
     <header className="bg-gray-300 text-white py-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center px-4">
         <div className="flex items-center space-x-9">
-          <div className="w-14 h-14 bg-gray-600 rounded-full flex items-center justify-center">
+          <NavLink
+            to={"/home"}
+            className="w-14 h-14 bg-gray-600 rounded-full flex items-center justify-center"
+          >
             <img src="./logo.png" alt="quiz" />
-          </div>
+          </NavLink>
           {token && (
             <div
               className="flex w-10 h-10 items-center cursor-pointer hover:bg-slate-400/60 p-1 hover:rounded-full"
