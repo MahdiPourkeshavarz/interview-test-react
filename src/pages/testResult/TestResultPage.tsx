@@ -1,12 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../../context/store";
+import { questionData } from "../../types";
+
+interface CurrentTest {
+  answers: string[];
+  questions: questionData[];
+}
 
 export function TestResultPage() {
   const { currentTest, clearStore } = useStore();
   const username = localStorage.getItem("username");
   const navigate = useNavigate();
 
-  const { answers, questions } = currentTest;
+  const { answers, questions } = currentTest as CurrentTest;
 
   const rightAnswers = questions.filter(
     (question, index) => answers[index] === question.right
@@ -18,7 +24,7 @@ export function TestResultPage() {
   );
 
   const unanswered = questions.filter(
-    (question, index) => answers[index] === ""
+    (_question, index) => answers[index] === ""
   );
 
   const isUserPassed = wrongAnswers.length + unanswered.length < 7;

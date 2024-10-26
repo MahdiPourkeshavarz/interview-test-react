@@ -3,6 +3,7 @@ export interface topicData {
   timeUnit: string;
   imgSrc?: string;
   participants?: string;
+  id?: number;
 }
 
 export interface userData {

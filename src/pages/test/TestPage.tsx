@@ -1,12 +1,21 @@
 import { useEffect, useState } from "react";
 import { httpRequest } from "../../lib/axiosConfig";
 import { QUESTIONS_URL, TESTS_URL, TOPICS_URL } from "../../constants";
-import { questionData } from "../../types";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { questionData, topicData } from "../../types";
+import {
+  LoaderFunctionArgs,
+  useLoaderData,
+  useNavigate,
+} from "react-router-dom";
 import { useStore } from "../../context/store";
 
+interface TestLoader {
+  questions: questionData[];
+  topic: topicData;
+}
+
 export function TestPage() {
-  const data = useLoaderData();
+  const data = useLoaderData() as TestLoader;
   const username = localStorage.getItem("username");
   const navigate = useNavigate();
 
@@ -59,14 +68,16 @@ export function TestPage() {
 
     for (let i = 0; i < 20; i++) {
       const userAnswer = currentTest?.answers[i];
-      const currentQuestion = currentTest?.questions[i];
+      const currentQuestion = currentTest?.questions?.[i];
 
-      if (userAnswer === currentQuestion.right) {
-        right.push(currentQuestion);
-      } else if (userAnswer === "") {
-        withoutAnswer.push(currentQuestion);
-      } else {
-        wrong.push(currentQuestion);
+      if (currentQuestion) {
+        if (userAnswer === currentQuestion.right) {
+          right.push(currentQuestion);
+        } else if (userAnswer === "") {
+          withoutAnswer.push(currentQuestion);
+        } else {
+          wrong.push(currentQuestion);
+        }
       }
     }
 
@@ -181,7 +192,9 @@ export function TestPage() {
   );
 }
 
-export async function testLoader({ params }) {
+export async function testLoader({
+  params,
+}: LoaderFunctionArgs): Promise<TestLoader | null> {
   const testName = params.test;
   try {
     const response = await httpRequest.get(
