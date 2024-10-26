@@ -58,7 +58,7 @@ export function UserTestResultCard({ testData }: props) {
 
           <div className="mb-4">
             <h4 className="text-green-600 font-semibold">Correct Answers</h4>
-            {result?.right.map((question) => (
+            {result?.right?.map((question) => (
               <div key={question.id} className="p-2 border-b border-gray-300">
                 <p className="font-medium text-gray-900">{question.title}</p>
                 <p className="text-green-500">Correct: {question.right}</p>
@@ -75,7 +75,7 @@ export function UserTestResultCard({ testData }: props) {
 
           <div className="mb-4">
             <h4 className="text-red-600 font-semibold">Wrong Answers</h4>
-            {result?.wrong.map((question) => (
+            {result?.wrong?.map((question) => (
               <div key={question.id} className="p-2 border-b border-gray-300">
                 <p className="font-medium text-gray-900">{question.title}</p>
                 <p className="text-red-500">Correct: {question.right}</p>
@@ -92,7 +92,7 @@ export function UserTestResultCard({ testData }: props) {
 
           <div>
             <h4 className="text-yellow-600 font-semibold">Unanswered</h4>
-            {result?.withoutAnswer.map((question) => (
+            {result?.withoutAnswer?.map((question) => (
               <div key={question.id} className="p-2 border-b border-gray-300">
                 <p className="font-medium text-gray-900">{question.title}</p>
                 <p className="text-yellow-500">Correct: {question.right}</p>

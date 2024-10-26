@@ -1,10 +1,18 @@
-import { useLoaderData } from "react-router-dom";
+import { LoaderFunctionArgs, useLoaderData } from "react-router-dom";
 import { TESTS_URL } from "../../constants";
 import { httpRequest } from "../../lib/axiosConfig";
 import { UserTestResultCard } from "./testCard/userTestCard";
+import { resultData } from "../../types";
+
+interface ProfileData {
+  tests: resultData[];
+  username: string | undefined;
+}
 
 export function ProfilePage() {
-  const { tests, username } = useLoaderData();
+  const loaderData = useLoaderData() as ProfileData | null;
+
+  const { tests = [], username = "" } = loaderData || {};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
@@ -17,7 +25,7 @@ export function ProfilePage() {
           <p className="text-lg text-gray-700">No tests found for this user.</p>
         ) : (
           <div className="space-y-4">
-            {tests.map((test) => (
+            {tests.map((test: resultData) => (
               <UserTestResultCard key={test.id} testData={test} />
             ))}
           </div>
@@ -27,7 +35,9 @@ export function ProfilePage() {
   );
 }
 
-export async function profileLoader({ params }) {
+export async function profileLoader({
+  params,
+}: LoaderFunctionArgs): Promise<ProfileData | null> {
   const username = params.username;
   try {
     const response = await httpRequest.get(

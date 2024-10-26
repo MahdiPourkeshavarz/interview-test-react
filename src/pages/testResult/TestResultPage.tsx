@@ -5,15 +5,6 @@ export function TestResultPage() {
   const { currentTest, clearStore } = useStore();
   const username = localStorage.getItem("username");
   const navigate = useNavigate();
-  if (!currentTest) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-        <p className="text-lg font-semibold text-gray-700">
-          No test results available.
-        </p>
-      </div>
-    );
-  }
 
   const { answers, questions } = currentTest;
 
@@ -35,6 +26,16 @@ export function TestResultPage() {
   function handleClearTest() {
     clearStore();
     navigate("/home");
+  }
+
+  if (!currentTest) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
+        <p className="text-lg font-semibold text-gray-700">
+          No test results available.
+        </p>
+      </div>
+    );
   }
 
   return (
@@ -119,9 +120,4 @@ export function TestResultPage() {
       </div>
     </div>
   );
-}
-
-export function resultLoader({ params }) {
-  const testName = params.test;
-  return testName;
 }

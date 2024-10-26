@@ -26,6 +26,7 @@ export interface resultData {
   topic: string;
   numberofquestions: string;
   result: Result;
+  id?: number;
 }
 
 export interface Result {
