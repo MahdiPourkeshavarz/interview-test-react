@@ -16,7 +16,7 @@ export function AdminPage() {
   const username = localStorage.getItem("username");
   useEffect(() => {
     if (!username || username !== "adminzadeh") {
-      toast.error("عدم دسترسی مجاز!", {
+      toast.error("Access not Allowed!", {
         position: "bottom-center",
       });
       navigate("/");

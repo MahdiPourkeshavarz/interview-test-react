@@ -4,6 +4,7 @@ import { useState } from "react";
 import { deleteQuestion } from "../api/deleteQuestion";
 import { EditModal } from "./editModal";
 import { DeleteModal } from "./deleteModal";
+import { queryClient } from "../lib/reactQueryConfig";
 
 interface props {
   question: questionData;
@@ -30,6 +31,9 @@ export function AdminQuestionCard({ question, refetch }: props) {
 
   const deleteMutation = useMutation({
     mutationFn: (id: number) => deleteQuestion(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["questions"] });
+    },
   });
 
   function handleDeleteQuestion() {
@@ -80,6 +84,7 @@ export function AdminQuestionCard({ question, refetch }: props) {
               handleEditModalState();
             }}
             aria-label="Edit product"
+            title="Edit"
           >
             <img width="28px" src="/Edit.png" alt="Edit" />
           </button>
@@ -90,6 +95,7 @@ export function AdminQuestionCard({ question, refetch }: props) {
               handleModalState();
             }}
             aria-label="Delete product"
+            title="Delete"
           >
             <img width="30px" src="/Delete.png" alt="Delete" />
           </button>

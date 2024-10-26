@@ -7,9 +7,9 @@ export function ButtonGroup() {
   const [selected, setSelected] = useState(activeNav);
 
   const options = [
-    { label: "صفحه اصلی", value: "" },
-    { label: "نتایج", value: "results" },
-    { label: "سوالات", value: "questions" },
+    { label: "Main", value: "" },
+    { label: "Result", value: "results" },
+    { label: "Questions", value: "questions" },
   ];
 
   return (

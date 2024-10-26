@@ -28,7 +28,12 @@
             "topic": "react",
             "title": "Which of the answers are not a React component's life cycle?",
             "right": "Initialization",
-            "options": ["Mounting", "Initialization", "Updating", "Unmounting"]
+            "options": [
+              "Mounting",
+              "Initialization",
+              "Updating",
+              "Unmounting"
+            ]
           },
           {
             "id": 3,
@@ -306,7 +311,12 @@
             "title": "Which of the answers are not a React components life cycle?",
             "topic": "react",
             "right": "Initialization",
-            "options": ["Mounting", "Initialization", "Updating", "Unmounting"]
+            "options": [
+              "Mounting",
+              "Initialization",
+              "Updating",
+              "Unmounting"
+            ]
           },
           {
             "id": 9,
@@ -554,7 +564,12 @@
             "topic": "react",
             "title": "Which of the answers are not a React components life cycle?",
             "right": "Initialization",
-            "options": ["Mounting", "Initialization", "Updating", "Unmounting"]
+            "options": [
+              "Mounting",
+              "Initialization",
+              "Updating",
+              "Unmounting"
+            ]
           },
           {
             "id": 14,
@@ -887,6 +902,260 @@
         ]
       },
       "id": 8
+    },
+    {
+      "username": "meitipk",
+      "topic": "python",
+      "numberofquestions": 20,
+      "result": {
+        "right": [
+          {
+            "id": 41,
+            "title": "What does `len()` function do?",
+            "topic": "python",
+            "right": "Returns the length of an object",
+            "options": [
+              "Prints the object",
+              "Returns the length of an object",
+              "Adds elements to an object",
+              "Removes elements from an object"
+            ]
+          },
+          {
+            "id": 59,
+            "topic": "python",
+            "title": "What is the output of `print(not True)`?",
+            "right": "False",
+            "options": [
+              "True",
+              "False",
+              "Error",
+              "None"
+            ]
+          },
+          {
+            "id": 144,
+            "title": "Explain the difference between `append()` and `extend()` in Python lists.",
+            "topic": "python",
+            "right": "`append()` adds a single element, `extend()` adds multiple.",
+            "options": [
+              "They are the same.",
+              "`append()` adds a single element, `extend()` adds multiple.",
+              "`append()` adds multiple, `extend()` adds a single.",
+              "They are used for different data types."
+            ]
+          },
+          {
+            "id": 148,
+            "title": "What is the purpose of Python's `__init__` method?",
+            "topic": "python",
+            "right": "It's the constructor for a class.",
+            "options": [
+              "It's a destructor",
+              "It's the constructor for a class.",
+              "It's a static method",
+              "It's a class method"
+            ]
+          },
+          {
+            "id": 94,
+            "topic": "python",
+            "title": "What is a decorator in Python?",
+            "right": "A function that modifies another function",
+            "options": [
+              "A function that returns another function",
+              "A function that modifies another function",
+              "A method to create classes",
+              "A tool to optimize performance"
+            ]
+          },
+          {
+            "id": 53,
+            "topic": "python",
+            "title": "What does `%` operator do?",
+            "right": "Modulo operator",
+            "options": [
+              "Floor division",
+              "Floating-point division",
+              "Modulo operator",
+              "Exponentiation"
+            ]
+          },
+          {
+            "id": 44,
+            "title": "What is a dictionary?",
+            "topic": "python",
+            "right": "A collection of key-value pairs",
+            "options": [
+              "An ordered sequence of items",
+              "A collection of key-value pairs",
+              "A set of unique items",
+              "A tuple of items"
+            ]
+          },
+          {
+            "id": 51,
+            "topic": "python",
+            "title": "What is the output of `print(2**3)`?",
+            "right": "8",
+            "options": [
+              "6",
+              "9",
+              "8",
+              "5"
+            ]
+          },
+          {
+            "id": 147,
+            "title": "What is a lambda function in Python?",
+            "topic": "python",
+            "right": "An anonymous function defined using the `lambda` keyword.",
+            "options": [
+              "A named function",
+              "An anonymous function defined using the `lambda` keyword.",
+              "A type of class",
+              "A way to handle exceptions"
+            ]
+          },
+          {
+            "id": 40,
+            "topic": "python",
+            "title": "What is the output of `print(type(5))`?",
+            "right": "<class 'int'>",
+            "options": [
+              "<class 'str'>",
+              "<class 'float'>",
+              "<class 'int'>",
+              "<class 'bool'>"
+            ]
+          },
+          {
+            "id": 56,
+            "topic": "python",
+            "title": "What is an if statement used for?",
+            "right": "Conditional execution",
+            "options": [
+              "Iterating over a sequence",
+              "Conditional execution",
+              "Defining a function",
+              "Handling exceptions"
+            ]
+          },
+          {
+            "id": 73,
+            "topic": "python",
+            "title": "What does `__init__` method do in a Python class?",
+            "right": "Initializes the instance of the class",
+            "options": [
+              "Defines the class name",
+              "Initializes the instance of the class",
+              "Deletes the class",
+              "Copies the class"
+            ]
+          },
+          {
+            "id": 61,
+            "topic": "python",
+            "title": "How do you open a file for writing in Python?",
+            "right": "f = open('myfile.txt', 'w')",
+            "options": [
+              "f = open('myfile.txt', 'r')",
+              "f = open('myfile.txt', 'w')",
+              "f = open('myfile.txt', 'a')",
+              "f = open('myfile.txt', 'x')"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "id": 45,
+            "title": "What is a tuple?",
+            "topic": "python",
+            "right": "An ordered, immutable sequence of items",
+            "options": [
+              "An ordered, mutable sequence of items",
+              "An unordered collection of unique items",
+              "An ordered, immutable sequence of items",
+              "A key-value pair collection"
+            ]
+          },
+          {
+            "id": 88,
+            "topic": "python",
+            "title": "What does `del` keyword do in Python?",
+            "right": "Deletes objects",
+            "options": [
+              "Declares variables",
+              "Deletes objects",
+              "Defines functions",
+              "Destroys the interpreter"
+            ]
+          },
+          {
+            "id": 76,
+            "topic": "python",
+            "title": "What does `*args` do in a Python function?",
+            "right": "Allows the function to accept a variable number of positional arguments",
+            "options": [
+              "Allows the function to accept a fixed number of positional arguments",
+              "Allows the function to accept a variable number of keyword arguments",
+              "Allows the function to accept a variable number of positional arguments",
+              "Allows the function to return multiple values"
+            ]
+          },
+          {
+            "id": 79,
+            "topic": "python",
+            "title": "What is a list comprehension?",
+            "right": "A concise way to create lists",
+            "options": [
+              "A method to sort lists",
+              "A concise way to create lists",
+              "A function to filter lists",
+              "A loop to iterate lists"
+            ]
+          },
+          {
+            "id": 46,
+            "title": "What is a set?",
+            "topic": "python",
+            "right": "An unordered collection of unique items",
+            "options": [
+              "An ordered sequence of items",
+              "A collection of key-value pairs",
+              "An unordered collection of unique items",
+              "An ordered, immutable sequence of items"
+            ]
+          }
+        ],
+        "withoutAnswer": [
+          {
+            "id": 85,
+            "topic": "python",
+            "title": "What is a generator in Python?",
+            "right": "A function that returns an iterator with `yield`",
+            "options": [
+              "A function that returns a single value",
+              "A function that returns an iterator with `yield`",
+              "A method to generate random numbers",
+              "A class that creates objects"
+            ]
+          },
+          {
+            "id": 42,
+            "title": "What is a list comprehension?",
+            "topic": "python",
+            "right": "A concise way to create lists",
+            "options": [
+              "A type of loop",
+              "A concise way to create lists",
+              "A way to define functions",
+              "A way to handle exceptions"
+            ]
+          }
+        ]
+      },
+      "id": 9
     }
   ],
   "topics": [
@@ -908,7 +1177,7 @@
       "name": "python",
       "imgSrc": "https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png",
       "timeUnit": "70",
-      "participants": "0",
+      "participants": 1,
       "id": 3
     },
     {
@@ -924,7 +1193,12 @@
       "topic": "react",
       "title": "Which of the answers are not a React components life cycle?",
       "right": "Initialization",
-      "options": ["Mounting", "Initialization", "Updating", "Unmounting"]
+      "options": [
+        "Mounting",
+        "Initialization",
+        "Updating",
+        "Unmounting"
+      ]
     },
     {
       "id": 2,
@@ -1035,18 +1309,6 @@
       ]
     },
     {
-      "id": 11,
-      "title": "What is a higher-order component (HOC)?",
-      "topic": "react",
-      "right": "A function that takes a component and returns a new enhanced component",
-      "options": [
-        "A component with multiple child components",
-        "A function that takes a component and returns a new enhanced component",
-        "A component that uses context API",
-        "A component that uses hooks"
-      ]
-    },
-    {
       "id": 12,
       "title": "What is the purpose of `ref` in React?",
       "topic": "react",
@@ -1092,18 +1354,6 @@
         "Using `event.preventDefault()`",
         "Using `event.stopImmediatePropagation()`",
         "Using `event.cancel()`"
-      ]
-    },
-    {
-      "id": 16,
-      "title": "What is Fragment in React?",
-      "topic": "react",
-      "right": "A way to group elements without adding extra nodes to the DOM",
-      "options": [
-        "A type of component",
-        "A way to group elements without adding extra nodes to the DOM",
-        "A way to style components",
-        "A way to handle events"
       ]
     },
     {
@@ -1519,7 +1769,12 @@
       "topic": "python",
       "title": "What is the output of `print(2**3)`?",
       "right": "8",
-      "options": ["6", "9", "8", "5"]
+      "options": [
+        "6",
+        "9",
+        "8",
+        "5"
+      ]
     },
     {
       "id": 52,
@@ -1586,28 +1841,48 @@
       "topic": "python",
       "title": "What is the output of `print(True and False)`?",
       "right": "False",
-      "options": ["True", "False", "Error", "None"]
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "None"
+      ]
     },
     {
       "id": 58,
       "topic": "python",
       "title": "What is the output of `print(True or False)`?",
       "right": "True",
-      "options": ["False", "True", "Error", "None"]
+      "options": [
+        "False",
+        "True",
+        "Error",
+        "None"
+      ]
     },
     {
       "id": 59,
       "topic": "python",
       "title": "What is the output of `print(not True)`?",
       "right": "False",
-      "options": ["True", "False", "Error", "None"]
+      "options": [
+        "True",
+        "False",
+        "Error",
+        "None"
+      ]
     },
     {
       "id": 60,
       "topic": "python",
       "title": "What is the output of `print(len([1,2,3]))`?",
       "right": "3",
-      "options": ["2", "4", "3", "Error"]
+      "options": [
+        "2",
+        "4",
+        "3",
+        "Error"
+      ]
     },
     {
       "id": 61,
@@ -1686,7 +1961,12 @@
       "topic": "python",
       "title": "What is the output of `print('Hello'[::-1])`?",
       "right": "olleH",
-      "options": ["Hello", "olleH", "Error", "None"]
+      "options": [
+        "Hello",
+        "olleH",
+        "Error",
+        "None"
+      ]
     },
     {
       "id": 68,

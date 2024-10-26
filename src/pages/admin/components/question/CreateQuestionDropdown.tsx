@@ -61,6 +61,7 @@ export function CreateQuestion() {
   });
   const handleAddQuestion = async () => {
     if (
+      !selectedCategory ||
       !isAValid ||
       !isBValid ||
       !isCValid ||

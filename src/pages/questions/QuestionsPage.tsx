@@ -21,7 +21,7 @@ export function QuestionsPage() {
     isLoading,
     refetch,
   } = useQuery({
-    queryKey: ["question", options],
+    queryKey: ["questions", options],
     queryFn: () => getQuestions(options),
   });
 
