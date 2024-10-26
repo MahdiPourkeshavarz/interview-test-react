@@ -1,4 +1,4 @@
-# GadgetHub
+# QUIZ HUB
 
 This project is a React/TypeScript application consisting of two parts: a quiz application for users to take tests and view their results in their profiles, and an admin panel for managing quiz topics and questions (adding, editing, and deleting) and also visit all of the test result taken by users with their grades.
 
